@@ -363,6 +363,10 @@ p { margin: 0 0 1em; }
 .badge-live { background: var(--c-coral); }
 .badge-upcoming { background: var(--c-yellow); }
 
+.type-icon { width: auto; flex-shrink: 0; display: block; }
+.type-icon-echobox { height: 16px; }
+.type-icon-oedipus { height: 30px; }
+
 .tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .tag {
   font-size: 0.72rem;

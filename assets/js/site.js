@@ -94,6 +94,13 @@
     return '<span class="badge badge-live">Live · ' + escapeHTML(event.venue || "Oedipus Brewery") + "</span>";
   }
 
+  function typeIcon(event) {
+    if (event.type === "broadcast") {
+      return '<img class="type-icon type-icon-echobox" src="assets/img/Echobox.png" alt="Echobox" />';
+    }
+    return '<img class="type-icon type-icon-oedipus" src="assets/img/Oedipus_-_Craft_Space.webp" alt="Oedipus" />';
+  }
+
   function tagsHTML(tags) {
     if (!tags || !tags.length) return "";
     return (
@@ -108,7 +115,7 @@
   /* ---------------- card rendering ---------------- */
   function eventCard(event) {
     var upcoming = isUpcoming(event.date);
-    var badges = typeBadge(event) + (upcoming ? '<span class="badge badge-upcoming">Upcoming</span>' : "");
+    var badges = typeIcon(event) + typeBadge(event) + (upcoming ? '<span class="badge badge-upcoming">Upcoming</span>' : "");
 
     var audio = event.excerptAudioUrl
       ? '<audio controls preload="none" src="' + event.excerptAudioUrl + '">' +
