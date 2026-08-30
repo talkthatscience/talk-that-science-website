@@ -404,6 +404,16 @@ p { margin: 0 0 1em; }
   flex-wrap: wrap;
   margin-bottom: 1.75rem;
 }
+.tag-cloud {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+.tag-cloud .tag.active,
+.tag.active {
+  background: var(--c-yellow);
+}
 .filter-btn {
   background: var(--surface);
   border: 2px solid var(--ink);

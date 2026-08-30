@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/png" href="assets/img/logo.png" />
-<link rel="stylesheet" href="assets/css/style.css?v=4" />
+<link rel="stylesheet" href="assets/css/style.css?v=5" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -48,11 +48,7 @@
         <button class="filter-btn" data-filter="live_event">Live Bar Talks</button>
         <button class="filter-btn" data-filter="broadcast">Echobox Broadcasts</button>
       </div>
-      <div class="tag-search">
-        <label class="visually-hidden" for="tag-search-input">Search by tag</label>
-        <input type="search" id="tag-search-input" placeholder="Search by tag — e.g. Logic, AI, Housing…" autocomplete="off" />
-        <span class="tag-search-count" id="tag-search-count" aria-live="polite"></span>
-      </div>
+      <div class="tag-cloud" id="tag-cloud" role="group" aria-label="Filter by tag"></div>
 
       <div class="section-head">
         <div><h2>Upcoming</h2></div>
@@ -102,6 +98,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=3"></script>
+<script src="assets/js/site.js?v=4"></script>
 </body>
 </html>

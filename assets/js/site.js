@@ -9,22 +9,16 @@
 
   /* ---------------- tag buttons ---------------- */
   // Every tag (badges under any event card, wherever eventCard() puts one)
-  // is a real <button data-tag="...">. On the Events hub, clicking one
-  // filters in place. Everywhere else, there's no search box to filter —
-  // so it navigates to the hub pre-filtered on that tag instead.
+  // is a real <button data-tag="...">. renderEventsHub() below owns tag
+  // clicks on the Events hub itself (both the tag cloud and per-card
+  // tags, filtering in place). Everywhere else — no hub grids on the
+  // page — a tag click just navigates to the hub pre-filtered on it.
   function initTagButtons() {
+    if (document.getElementById("upcoming-events-grid") || document.getElementById("past-events-grid")) return;
     document.addEventListener("click", function (e) {
       var btn = e.target.closest(".tag[data-tag]");
       if (!btn) return;
-      var tag = btn.getAttribute("data-tag");
-      var searchInput = document.getElementById("tag-search-input");
-      if (searchInput) {
-        searchInput.value = tag;
-        searchInput.dispatchEvent(new Event("input"));
-        searchInput.focus();
-      } else {
-        window.location.href = "events.html?tag=" + encodeURIComponent(tag);
-      }
+      window.location.href = "events.html?tag=" + encodeURIComponent(btn.getAttribute("data-tag"));
     });
   }
 
@@ -186,52 +180,50 @@
   function renderEventsHub() {
     var upcomingWrap = document.getElementById("upcoming-events-grid");
     var pastWrap = document.getElementById("past-events-grid");
+    var cloudWrap = document.getElementById("tag-cloud");
     if (!upcomingWrap && !pastWrap) return;
 
-    var searchInput = document.getElementById("tag-search-input");
-    var countEl = document.getElementById("tag-search-count");
-
     var currentFilter = "all";
-    var currentQuery = "";
+    // A tag button clicked elsewhere on the site links here as
+    // events.html?tag=... — start pre-filtered on that tag.
+    var activeTag = new URLSearchParams(window.location.search).get("tag") || null;
     var allEvents = [];
 
-    function matchesQuery(event, query) {
-      if (!query) return true;
-      return (event.tags || []).some(function (t) {
-        return t.toLowerCase().indexOf(query) !== -1;
-      });
+    function allTags(events) {
+      var set = {};
+      events.forEach(function (e) { (e.tags || []).forEach(function (t) { set[t] = true; }); });
+      return Object.keys(set).sort();
+    }
+
+    function drawCloud() {
+      if (!cloudWrap) return;
+      cloudWrap.innerHTML = allTags(allEvents).map(function (t) {
+        var active = t === activeTag ? " active" : "";
+        return '<button type="button" class="tag' + active + '" data-tag="' + escapeHTML(t) + '">' + escapeHTML(t) + "</button>";
+      }).join("");
     }
 
     function draw() {
-      var query = currentQuery.trim().toLowerCase();
       var filtered = allEvents.filter(function (e) {
         if (currentFilter !== "all" && e.type !== currentFilter) return false;
-        return matchesQuery(e, query);
+        if (activeTag && (e.tags || []).indexOf(activeTag) === -1) return false;
+        return true;
       });
       var upcoming = sortByDate(filtered.filter(function (e) { return isUpcoming(e.date); }), true);
       var past = sortByDate(filtered.filter(function (e) { return !isUpcoming(e.date); }), false);
+      var emptyMsg = activeTag ? "No events tagged “" + escapeHTML(activeTag) + "”." : null;
 
       if (upcomingWrap) {
         upcomingWrap.innerHTML = upcoming.length
           ? upcoming.map(eventCard).join("")
-          : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "Nothing upcoming in this category yet.") + "</div>";
+          : '<div class="empty-state">' + (emptyMsg || "Nothing upcoming in this category yet.") + "</div>";
       }
       if (pastWrap) {
         pastWrap.innerHTML = past.length
           ? past.map(eventCard).join("")
-          : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "No past entries in this category yet.") + "</div>";
+          : '<div class="empty-state">' + (emptyMsg || "No past entries in this category yet.") + "</div>";
       }
-      if (countEl) {
-        countEl.textContent = query ? filtered.length + " match" + (filtered.length === 1 ? "" : "es") : "";
-      }
-    }
-
-    // A tag button clicked elsewhere on the site links here as
-    // events.html?tag=... — start pre-filtered on that tag.
-    var tagFromUrl = new URLSearchParams(window.location.search).get("tag");
-    if (tagFromUrl) {
-      currentQuery = tagFromUrl;
-      if (searchInput) searchInput.value = tagFromUrl;
+      drawCloud();
     }
 
     loadEvents().then(function (events) {
@@ -249,12 +241,16 @@
       });
     });
 
-    if (searchInput) {
-      searchInput.addEventListener("input", function () {
-        currentQuery = searchInput.value;
-        draw();
-      });
-    }
+    // Handles both the tag cloud above and the tags on each event card:
+    // clicking the already-active tag clears the filter, clicking any
+    // other tag selects it.
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".tag[data-tag]");
+      if (!btn) return;
+      var tag = btn.getAttribute("data-tag");
+      activeTag = activeTag === tag ? null : tag;
+      draw();
+    });
   }
 
   /* ---------------- page: calendar ---------------- */
