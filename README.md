@@ -46,11 +46,11 @@ would be needed.
   - The Echobox player on the homepage (`#echobox-player`) currently links
     out to the live stream — swap it for Echobox's official embed/widget
     code if/when they provide one.
-  - `content/events.json` now holds the 27 real episodes from
-    `data/episodes.jsonl` (see "Episode data" below), but none of them have
-    a description, excerpt audio, or slide deck yet — those still need
-    filling in via `/admin` as they become available. Sample MP3s/PDFs from
-    the original demo are still sitting in `assets/media/`, now unused.
+  - `content/events.json` holds real episodes from `data/episodes.jsonl`
+    (see "Episode data" below) with real descriptions, but no guest
+    photos, theme photos, excerpt audio, or slide decks yet — those still
+    need filling in via `/admin` (or `assets/media/<event-id>/`, see
+    "Media files" below) as they become available.
   - The four `action="https://formspree.io/f/YOUR_FORM_ID"` attributes (three
     forms in `get-involved.html`, the newsletter box in `index.html`) need
     your real Formspree form IDs — see "Forms" below.
@@ -80,7 +80,7 @@ content/
 assets/
   css/style.css           All styling + the colour variables
   js/site.js              Fetches content/*.json and renders it into pages
-  media/                  Uploaded slide PDFs + audio excerpts land here
+  media/<event-id>/       One folder per event — see "Media files"
 .github/workflows/pages.yml  GitHub Actions workflow that deploys to Pages
 .nojekyll                  Tells GitHub Pages not to run this through Jekyll
 ```
@@ -126,6 +126,31 @@ distinguishing a live bar night from a radio broadcast, so every synced
 event defaults to `type: "broadcast"`. Fix individual ones to "Live Bar
 Talk" (+ venue) via `/admin` where that's wrong — see
 `pending-tasks/05-real-event-content.md`.
+
+## Media files
+
+Every event gets its own folder: `assets/media/<event-id>/` (the same
+`id` as in `content/events.json`, e.g. `assets/media/2024-01-18-coral-reefs/`).
+`scripts/sync-episodes.js` creates one automatically for every episode
+synced from `data/episodes.jsonl`, so a folder exists before any content
+does — drop files in directly, or upload through `/admin` (see below).
+
+- **Uploading via `/admin`**: the Guest Photo, Theme Photo, Excerpt Audio,
+  and Slide Deck fields each have a `media_folder`/`public_folder`
+  override pointing at `assets/media/{{id}}` — Decap CMS resolves `{{id}}`
+  against that same event's own `id` field, so a drag-and-drop upload on
+  any event lands directly in its folder, not one flat pile. This hasn't
+  been tested against a live `/admin` yet (needs the CMS OAuth backend —
+  see `pending-tasks/02-cms-github-oauth.md`) — worth confirming once
+  that's set up, and letting me know if `{{id}}` doesn't resolve as
+  expected.
+- **Uploading directly**: just drop a file into the matching
+  `assets/media/<event-id>/` folder and set that event's
+  `guestPhotoUrl`/`themePhotoUrl`/`excerptAudioUrl`/`slideUrl` in
+  `content/events.json` to its path (e.g.
+  `"assets/media/2024-01-18-coral-reefs/guest.jpg"`), then commit.
+- A `.gitkeep` file in each folder is the only thing keeping empty ones
+  tracked by git — delete it once the folder has real content in it.
 
 ## Deploying (GitHub Pages, ~5 minutes)
 

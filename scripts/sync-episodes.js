@@ -21,6 +21,10 @@
  *   - Events in content/events.json that DON'T correspond to any
  *     episodes.jsonl record (e.g. hand-added live bar-night events, which
  *     have no episode_number) are left completely untouched.
+ *
+ * Also ensures an assets/media/<id>/ folder exists for every episode (with
+ * a .gitkeep so git tracks it before it has real content) — see README.md
+ * "Media files". Never touches a folder that already exists.
  */
 
 const fs = require("fs");
@@ -29,6 +33,7 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const EPISODES_PATH = path.join(ROOT, "data", "episodes.jsonl");
 const EVENTS_PATH = path.join(ROOT, "content", "events.json");
+const MEDIA_ROOT = path.join(ROOT, "assets", "media");
 
 function slugify(title) {
   return title
@@ -72,10 +77,20 @@ function episodeToEvent(ep) {
   };
 }
 
+function ensureMediaFolder(id) {
+  const dir = path.join(MEDIA_ROOT, id);
+  if (fs.existsSync(dir)) return false;
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, ".gitkeep"), "");
+  return true;
+}
+
 function main() {
   const episodes = readEpisodes();
   const generated = episodes.map(episodeToEvent);
   const generatedIds = new Set(generated.map((e) => e.id));
+
+  const foldersCreated = generated.filter((e) => ensureMediaFolder(e.id)).length;
 
   let existing = { events: [] };
   if (fs.existsSync(EVENTS_PATH)) {
@@ -101,7 +116,8 @@ function main() {
   fs.writeFileSync(EVENTS_PATH, JSON.stringify({ events }, null, 2) + "\n");
   console.log(
     `Wrote ${events.length} events to content/events.json ` +
-      `(${generated.length} from episodes.jsonl, ${untouched.length} untouched).`
+      `(${generated.length} from episodes.jsonl, ${untouched.length} untouched). ` +
+      `Created ${foldersCreated} new assets/media/ folder(s).`
   );
 }
 

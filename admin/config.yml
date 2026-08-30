@@ -104,12 +104,12 @@ collections:
                   - { label: "Echobox Broadcast", value: "broadcast" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Guest(s)", name: "guest", widget: "string", required: false }
-              - { label: "Guest Photo", name: "guestPhotoUrl", widget: "image", required: false, hint: "Drag & drop a headshot — shows as a small round avatar next to the guest's name" }
+              - { label: "Guest Photo", name: "guestPhotoUrl", widget: "image", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop a headshot — shows as a small round avatar next to the guest's name" }
               - { label: "Date", name: "date", widget: "date", date_format: "YYYY-MM-DD", picker_utc: true }
               - { label: "Venue", name: "venue", widget: "string", required: false, hint: "Only needed for live events" }
               - { label: "Tags", name: "tags", widget: "list", required: false }
               - { label: "Description / Excerpt text", name: "description", widget: "text", required: false }
-              - { label: "Theme Photo", name: "themePhotoUrl", widget: "image", required: false, hint: "Drag & drop an image capturing the episode's topic — shows as the card's cover image" }
-              - { label: "Excerpt Audio", name: "excerptAudioUrl", widget: "file", required: false, hint: "Drag & drop an mp3 — plays on the Events & Slides page" }
-              - { label: "Slide Deck (PDF)", name: "slideUrl", widget: "file", required: false, hint: "Drag & drop a PDF — shows a 'View Slides' button" }
+              - { label: "Theme Photo", name: "themePhotoUrl", widget: "image", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop an image capturing the episode's topic — shows as the card's cover image" }
+              - { label: "Excerpt Audio", name: "excerptAudioUrl", widget: "file", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop an mp3 — plays on the Events & Slides page" }
+              - { label: "Slide Deck (PDF)", name: "slideUrl", widget: "file", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop a PDF — shows a 'View Slides' button" }
               - { label: "External Episode Link", name: "episodeLink", widget: "string", required: false, hint: "e.g. SoundCloud/Spotify link for broadcasts" }
