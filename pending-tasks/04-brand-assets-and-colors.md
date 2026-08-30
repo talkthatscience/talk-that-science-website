@@ -9,14 +9,18 @@
   block) were colour-picked from Echobox Radio's site, with blue/purple
   lightened slightly for WCAG contrast. They're close, not necessarily
   exact brand hex codes.
-- The Echobox Radio / Oedipus Brewery footer icons (inline SVGs in every
-  `.html` file, search for `<svg`) are generic line-icons, not official
-  logo marks.
+- ~~The Echobox Radio footer icon was a generic line-icon~~ — **done**:
+  the real Echobox wordmark (`assets/img/Echobox.png`) is now used in the
+  footer `.icon-chip` on every page.
+- The Oedipus Brewery footer icon is still a generic line-icon, not their
+  official logo mark.
 
 ## What to do
 
 1. If an official Talk That Science / Echobox style guide exists, get the
    exact hex codes and swap the `--c-*` variables in `assets/css/style.css`.
-2. Get usage rights + real logo files for Echobox Radio and Oedipus
-   Brewery, then replace the inline `<svg>` icon in the footer's
-   `.icon-chip` spans with `<img>` tags pointing at the real marks.
+2. Get usage rights + a real logo file for Oedipus Brewery, then replace
+   the inline `<svg>` icon in its `.icon-chip` span (search each `.html`
+   file for `Oedipus Brewery`) the same way the Echobox one was done —
+   see `.icon-chip-echobox` in `assets/css/style.css` as the pattern to
+   follow.
