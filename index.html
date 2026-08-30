@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Talk That Science — Echobox Radio &amp; Live Science Bar Talks</title>
+<meta name="description" content="Talk That Science: a monthly talk show on Echobox Radio and a live science bar night at Oedipus Brewery. Listen live, browse the archive, and catch up on past events." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.png" alt="Talk That Science" />
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="events.html">Events &amp; Slides</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="about.html">About</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a class="btn btn-primary" href="https://www.echobox.radio/" target="_blank" rel="noopener" style="padding:0.5rem 1.1rem;">Listen Live</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+  <div class="rainbow-bar"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container hero-split">
+      <div>
+        <div class="eyebrow">Echobox Radio &middot; Oedipus Brewery, Amsterdam</div>
+        <h1>Real research. Real questions. No jargon left unexplained.</h1>
+        <p class="hero-lede">We play the nicest tunes while talking about the coolest research — monthly on Echobox Radio, and live at Oedipus Brewery for anyone who wants to ask the questions peer review never will.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.echobox.radio/" target="_blank" rel="noopener">▶ Listen Live on Echobox</a>
+          <a class="btn btn-secondary" href="events.html">Browse Events &amp; Slides</a>
+        </div>
+      </div>
+      <img class="hero-illustration" src="assets/img/hero-illustration.png" alt="Illustration of scientists in lab coats playing with radio and lab equipment, in the Talk That Science style" />
+    </div>
+
+    <div class="container">
+      <!-- PLACEHOLDER: swap this card for Echobox's official embed/player widget once available. -->
+      <div class="player-card" id="echobox-player">
+        <div class="pulse">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 13V5" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="12" cy="15" r="2" fill="var(--accent)"/>
+            <path d="M8 6a4 4 0 0 1 8 0" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="player-info">
+          <div class="status">Monthly &middot; Echobox Radio</div>
+          <h3>Talk That Science is on air once a month</h3>
+        </div>
+        <a class="btn btn-primary" href="https://www.echobox.radio/" target="_blank" rel="noopener">Open Live Stream</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Coming up next</h2>
+          <p>The next broadcast or bar night — full details on the calendar.</p>
+        </div>
+        <a class="btn btn-secondary" href="calendar.html">Full Calendar →</a>
+      </div>
+      <div class="grid" id="next-event-teaser">
+        <div class="empty-state">Loading…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Catch up on the latest</h2>
+          <p>Most recent episode — excerpt below, full archive on the Events &amp; Slides hub.</p>
+        </div>
+        <a class="btn btn-secondary" href="events.html">Full Archive →</a>
+      </div>
+      <div class="grid" id="latest-episode-teaser">
+        <div class="empty-state">Loading…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="form-card" style="max-width:640px;">
+        <h2 style="margin-top:0;">Never miss an episode</h2>
+        <p class="card-desc">One email whenever there's a new broadcast or bar night. No spam, unsubscribe any time.</p>
+        <!-- PLACEHOLDER: sign up at formspree.io, create a form, and replace
+             YOUR_FORM_ID below with the ID it gives you — or point this at a
+             real mailing list provider (Buttondown/Mailchimp/etc). See README. -->
+        <form name="newsletter" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" data-ajax-form data-success-target="newsletter-success">
+          <p class="visually-hidden"><label>Don't fill this out: <input name="_gotcha" /></label></p>
+          <div class="form-success" id="newsletter-success">You're on the list — thanks!</div>
+          <div class="newsletter-box">
+            <label class="visually-hidden" for="newsletter-email">Email address</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required />
+            <button class="btn btn-primary" type="submit">Sign me up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="icon-row" style="margin-top:0;">
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="15" r="2" fill="currentColor"/>
+              <path d="M12 13V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M17 15a5 5 0 0 0 0-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 15a5 5 0 0 1 0-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Echobox Radio
+          </span>
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 8h11v9a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V8Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M7 8c0-2 1-3 1-4M10 8c0-2-1-3-1-4M13 8c0-2 1-3 1-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            Oedipus Brewery
+          </span>
+        </div>
+        <p style="margin-top:1rem; max-width:420px;">A monthly talk show on Echobox Radio and a live science bar night at Oedipus Brewery, Amsterdam.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href="https://open.spotify.com/show/5P6UUt4J4bajvaDnTxchvd" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/us/podcast/talk-that-science/id1529252885" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://soundcloud.com/talkthatscience" target="_blank" rel="noopener">SoundCloud</a>
+          <a href="mailto:hello@talkthatscience.example">Email</a>
+        </div>
+        <p class="footer-admin">Content managers: <a href="admin/">/admin</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

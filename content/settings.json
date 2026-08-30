@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Talk That Science",
+  "tagline": "We play the nicest tunes while talking about the coolest research.",
+  "heroSubtext": "A monthly talk show on Echobox Radio — and a live science bar night at Oedipus Brewery. Real researchers, real questions, zero jargon left unexplained.",
+  "echobox": {
+    "showUrl": "https://www.echobox.radio/shows/talk-that-science",
+    "liveStreamUrl": "https://www.echobox.radio/",
+    "embedNote": "PLACEHOLDER: swap the #echobox-player div in index.html for Echobox's official embed/widget snippet once you have it. Until then it links out to the live stream.",
+    "broadcastSchedule": "Monthly, live on Echobox Radio, Amsterdam"
+  },
+  "listenLinks": {
+    "spotify": "https://open.spotify.com/show/5P6UUt4J4bajvaDnTxchvd",
+    "applePodcasts": "https://podcasts.apple.com/us/podcast/talk-that-science/id1529252885",
+    "soundcloud": "https://soundcloud.com/talkthatscience"
+  },
+  "venue": {
+    "name": "Oedipus Brewery",
+    "address": "Overhoeksplein 3, 1031 KS Amsterdam",
+    "note": "PLACEHOLDER: confirm current venue address / room details."
+  },
+  "social": {
+    "instagram": "#",
+    "email": "hello@talkthatscience.example"
+  },
+  "about": {
+    "mission": "Talk That Science exists to drag brilliant, under-heard research out of journals and into rooms full of curious, slightly tipsy people. Every episode and every bar night pairs one host, one or two researchers, and a live audience that's allowed — encouraged, even — to ask the questions journal peer review never will.",
+    "story": "What started as a monthly slot on Echobox Radio turned into a live event series at Oedipus Brewery: same mix of good music and real science, just with beer and a room full of neighbours. This site is the front door to both — stream the show, catch up on past episodes, see what's coming up, and grab the slides if you were in the room (or wish you had been).",
+    "teamNote": "PLACEHOLDER: add real host/producer bios and photos here via the CMS."
+  },
+  "newsletter": {
+    "enabled": true,
+    "provider": "PLACEHOLDER — point this form at your Buttondown/Mailchimp/etc. endpoint. Currently wired to Formspree so signups land in your Formspree dashboard until you connect a mailing list provider."
+  }
+}

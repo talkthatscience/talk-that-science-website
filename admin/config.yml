@@ -1,0 +1,113 @@
+# Decap CMS configuration for Talk That Science
+# Docs: https://decapcms.org/docs/add-to-your-site/
+#
+# This uses the github backend: content managers log in with their own
+# GitHub account (via OAuth) and Decap commits changes to this repo on
+# their behalf using the GitHub API. Two things are required for this to
+# work, both one-time setup — see README.md "Turning on the CMS":
+#   1. A GitHub OAuth App.
+#   2. A small OAuth proxy (a free Cloudflare Worker) that App points at —
+#      GitHub's OAuth flow needs a server-side step Decap can't do alone.
+# Every content manager also needs to be added as a collaborator on this
+# GitHub repo (Settings → Collaborators) — the github backend authenticates
+# them as themselves, not through a separate invite-only login system.
+#
+# To test locally without any of the above: run `npx decap-server` alongside
+# any static server, and temporarily uncomment `local_backend: true` below.
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME # PLACEHOLDER — e.g. jsmith/talk-that-science-website
+  branch: main
+  base_url: https://YOUR_WORKER_SUBDOMAIN.workers.dev # PLACEHOLDER — your deployed OAuth proxy
+  auth_endpoint: /auth
+
+# local_backend: true
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/media"
+public_folder: "assets/media"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Hero Subtext", name: "heroSubtext", widget: "text" }
+          - label: "Echobox"
+            name: "echobox"
+            widget: "object"
+            fields:
+              - { label: "Show Page URL", name: "showUrl", widget: "string" }
+              - { label: "Live Stream URL", name: "liveStreamUrl", widget: "string" }
+              - { label: "Embed Note (internal)", name: "embedNote", widget: "text", required: false }
+              - { label: "Broadcast Schedule", name: "broadcastSchedule", widget: "string" }
+          - label: "Listen Links"
+            name: "listenLinks"
+            widget: "object"
+            fields:
+              - { label: "Spotify", name: "spotify", widget: "string", required: false }
+              - { label: "Apple Podcasts", name: "applePodcasts", widget: "string", required: false }
+              - { label: "SoundCloud", name: "soundcloud", widget: "string", required: false }
+          - label: "Venue"
+            name: "venue"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Note (internal)", name: "note", widget: "text", required: false }
+          - label: "Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "Contact Email", name: "email", widget: "string" }
+          - label: "About Page"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Mission", name: "mission", widget: "text" }
+              - { label: "Story", name: "story", widget: "text" }
+              - { label: "Team Note", name: "teamNote", widget: "text", required: false }
+          - label: "Newsletter"
+            name: "newsletter"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Provider Note (internal)", name: "provider", widget: "text", required: false }
+
+  - name: "events"
+    label: "Events & Broadcasts"
+    files:
+      - file: "content/events.json"
+        label: "All Events"
+        name: "events"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "ID (unique, no spaces)", name: "id", widget: "string", hint: "e.g. 2026-09-08-ai-trust-bar" }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Live Bar Talk (Oedipus Brewery)", value: "live_event" }
+                  - { label: "Echobox Broadcast", value: "broadcast" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Guest(s)", name: "guest", widget: "string", required: false }
+              - { label: "Date", name: "date", widget: "date", date_format: "YYYY-MM-DD", picker_utc: true }
+              - { label: "Venue", name: "venue", widget: "string", required: false, hint: "Only needed for live events" }
+              - { label: "Tags", name: "tags", widget: "list", required: false }
+              - { label: "Description / Excerpt text", name: "description", widget: "text", required: false }
+              - { label: "Excerpt Audio", name: "excerptAudioUrl", widget: "file", required: false, hint: "Drag & drop an mp3 — plays on the Events & Slides page" }
+              - { label: "Slide Deck (PDF)", name: "slideUrl", widget: "file", required: false, hint: "Drag & drop a PDF — shows a 'View Slides' button" }
+              - { label: "External Episode Link", name: "episodeLink", widget: "string", required: false, hint: "e.g. SoundCloud/Spotify link for broadcasts" }

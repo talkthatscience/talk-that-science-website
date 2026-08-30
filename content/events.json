@@ -1,0 +1,131 @@
+{
+  "events": [
+    {
+      "id": "2026-04-16-microplastics",
+      "type": "broadcast",
+      "title": "3D Printing In Space",
+      "guest": "Dr. Théo Marchal",
+      "date": "2026-04-16",
+      "tags": [
+        "space",
+        "engineering",
+        "materials"
+      ],
+      "description": "Why gravity changes everything about additive manufacturing, and what's already been printed in orbit.",
+      "excerptAudioUrl": "assets/media/excerpt-microplastics.mp3",
+      "slideUrl": null,
+      "episodeLink": "https://soundcloud.com/talkthatscience/3d-printing-in-space-echoboxradio"
+    },
+    {
+      "id": "2026-05-12-ai-trust-broadcast",
+      "type": "broadcast",
+      "title": "Political Trust in the Age of AI",
+      "guest": "Prof. Amara Idowu",
+      "date": "2026-05-12",
+      "tags": [
+        "ai",
+        "politics",
+        "society"
+      ],
+      "description": "What happens to public trust when AI enters the newsroom and the ballot box.",
+      "excerptAudioUrl": "assets/media/excerpt-ai-trust.mp3",
+      "slideUrl": null,
+      "episodeLink": "https://soundcloud.com/talkthatscience/political-trust-echobox-radio"
+    },
+    {
+      "id": "2026-06-18-quantum-bar",
+      "type": "live_event",
+      "title": "Quantum Computing & Cold Coffee",
+      "guest": "Dr. Lena Voss",
+      "date": "2026-06-18",
+      "venue": "Oedipus Brewery",
+      "tags": [
+        "physics",
+        "computing"
+      ],
+      "description": "A live Science Bar Talk on decoherence, qubits, and why your espresso machine understands thermodynamics better than most quantum hardware.",
+      "excerptAudioUrl": "assets/media/excerpt-quantum-coffee.mp3",
+      "slideUrl": "assets/media/slides-quantum-coffee.pdf",
+      "episodeLink": null
+    },
+    {
+      "id": "2026-07-14-coral-broadcast",
+      "type": "broadcast",
+      "title": "Exoten in Amsterdam's Canals",
+      "guest": "Dr. Femke Bruggen",
+      "date": "2026-07-14",
+      "tags": [
+        "ecology",
+        "urban science"
+      ],
+      "description": "Mapping the new arrivals in the city's canal ecosystem and what they mean for the local food web.",
+      "excerptAudioUrl": "assets/media/excerpt-coral-reefs.mp3",
+      "slideUrl": null,
+      "episodeLink": "https://soundcloud.com/talkthatscience/exoten-in-amsterdam-echobox-radio"
+    },
+    {
+      "id": "2026-08-06-coral-bar",
+      "type": "live_event",
+      "title": "Exoten in Amsterdam's Canals — Live",
+      "guest": "Dr. Femke Bruggen",
+      "date": "2026-08-06",
+      "venue": "Oedipus Brewery",
+      "tags": [
+        "ecology",
+        "urban science"
+      ],
+      "description": "The live bar-night follow-up: audience-submitted canal sightings, live-identified.",
+      "excerptAudioUrl": "assets/media/excerpt-coral-reefs.mp3",
+      "slideUrl": "assets/media/slides-coral-reefs.pdf",
+      "episodeLink": null
+    },
+    {
+      "id": "2026-09-08-ai-trust-bar",
+      "type": "live_event",
+      "title": "Political Trust in the Age of AI — Live",
+      "guest": "Prof. Amara Idowu",
+      "date": "2026-09-08",
+      "venue": "Oedipus Brewery",
+      "tags": [
+        "ai",
+        "politics",
+        "society"
+      ],
+      "description": "Bring your best skeptical question — live panel and open discussion, no jargon left unexplained.",
+      "excerptAudioUrl": "assets/media/excerpt-ai-trust.mp3",
+      "slideUrl": "assets/media/slides-ai-trust.pdf",
+      "episodeLink": null
+    },
+    {
+      "id": "2026-09-24-broadcast-upcoming",
+      "type": "broadcast",
+      "title": "The Microplastics In Your Kitchen",
+      "guest": "Dr. Sanne Kuipers",
+      "date": "2026-09-24",
+      "tags": [
+        "chemistry",
+        "health"
+      ],
+      "description": "What we actually know (and don't) about microplastics in everyday food packaging.",
+      "excerptAudioUrl": null,
+      "slideUrl": null,
+      "episodeLink": null
+    },
+    {
+      "id": "2026-10-29-quantum-bar-2",
+      "type": "live_event",
+      "title": "Quantum Computing & Cold Coffee — Part II",
+      "guest": "Dr. Lena Voss",
+      "date": "2026-10-29",
+      "venue": "Oedipus Brewery",
+      "tags": [
+        "physics",
+        "computing"
+      ],
+      "description": "The sequel bar night: what changed in five months of qubit research, and audience-submitted questions from Part I.",
+      "excerptAudioUrl": null,
+      "slideUrl": null,
+      "episodeLink": null
+    }
+  ]
+}
