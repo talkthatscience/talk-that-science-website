@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/png" href="assets/img/logo.png" />
-<link rel="stylesheet" href="assets/css/style.css?v=6" />
+<link rel="stylesheet" href="assets/css/style.css?v=7" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -34,10 +34,24 @@
 
 <main id="main">
 
+  <section class="section" style="padding-bottom:1rem;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Coming up next</h2>
+          <p>The next Echobox broadcast, and the next live night at Oedipus — both, always.</p>
+        </div>
+        <a class="btn btn-secondary" href="calendar.html">Full Calendar →</a>
+      </div>
+      <div class="grid" id="next-events-teaser">
+        <div class="empty-state">Loading…</div>
+      </div>
+    </div>
+  </section>
+
   <section class="hero">
     <div class="container hero-split">
       <div>
-        <a class="next-episode-banner" id="next-episode-banner" href="calendar.html" style="display:none;"></a>
         <div class="eyebrow">Echobox Radio &middot; Oedipus Brewery, Amsterdam</div>
         <h1>Real research. Real questions. No jargon left unexplained.</h1>
         <p class="hero-lede">We play the nicest tunes while talking about the coolest research — monthly on Echobox Radio, and live at Oedipus Brewery for anyone who wants to ask the questions peer review never will.</p>
@@ -64,21 +78,6 @@
           <h3>Talk That Science is on air once a month</h3>
         </div>
         <a class="btn btn-primary" href="https://www.echobox.radio/" target="_blank" rel="noopener">Open Live Stream</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>Coming up next</h2>
-          <p>The next broadcast or bar night — full details on the calendar.</p>
-        </div>
-        <a class="btn btn-secondary" href="calendar.html">Full Calendar →</a>
-      </div>
-      <div class="grid" id="next-event-teaser">
-        <div class="empty-state">Loading…</div>
       </div>
     </div>
   </section>
@@ -145,6 +144,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=5"></script>
+<script src="assets/js/site.js?v=6"></script>
 </body>
 </html>

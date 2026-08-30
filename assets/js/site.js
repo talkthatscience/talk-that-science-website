@@ -155,36 +155,28 @@
 
   /* ---------------- page: home ---------------- */
   function renderHome() {
-    var nextEl = document.getElementById("next-event-teaser");
+    var nextEventsEl = document.getElementById("next-events-teaser");
     var latestEl = document.getElementById("latest-episode-teaser");
-    var bannerEl = document.getElementById("next-episode-banner");
-    if (!nextEl && !latestEl && !bannerEl) return;
+    if (!nextEventsEl && !latestEl) return;
 
     loadEvents().then(function (events) {
       var upcoming = sortByDate(events.filter(function (e) { return isUpcoming(e.date); }), true);
       var past = sortByDate(events.filter(function (e) { return !isUpcoming(e.date); }), false);
 
-      if (nextEl) {
-        nextEl.innerHTML = upcoming.length
-          ? eventCard(upcoming[0])
-          : '<div class="empty-state">No upcoming dates published yet — check back soon.</div>';
+      if (nextEventsEl) {
+        // Always show both slots — the next Echobox broadcast AND the
+        // next live Oedipus night — rather than just whichever of the
+        // two happens to fall first chronologically.
+        var nextBroadcast = upcoming.filter(function (e) { return e.type === "broadcast"; })[0];
+        var nextLive = upcoming.filter(function (e) { return e.type === "live_event"; })[0];
+        nextEventsEl.innerHTML =
+          (nextBroadcast ? eventCard(nextBroadcast) : '<div class="empty-state">No Echobox broadcast scheduled yet.</div>') +
+          (nextLive ? eventCard(nextLive) : '<div class="empty-state">No live night at Oedipus scheduled yet.</div>');
       }
       if (latestEl) {
         latestEl.innerHTML = past.length
           ? eventCard(past[0])
           : '<div class="empty-state">No past episodes published yet.</div>';
-      }
-      if (bannerEl) {
-        if (upcoming.length) {
-          var next = upcoming[0];
-          var kind = next.type === "live_event" ? "Live at " + (next.venue || "Oedipus Brewery") : "Next broadcast";
-          bannerEl.innerHTML =
-            '<span class="pulse-dot"></span>' +
-            kind + ": <strong>" + escapeHTML(next.title) + "</strong> &middot; " + formatDate(next.date);
-          bannerEl.style.display = "";
-        } else {
-          bannerEl.style.display = "none";
-        }
       }
     });
   }
