@@ -157,7 +157,8 @@
   function renderHome() {
     var nextEl = document.getElementById("next-event-teaser");
     var latestEl = document.getElementById("latest-episode-teaser");
-    if (!nextEl && !latestEl) return;
+    var bannerEl = document.getElementById("next-episode-banner");
+    if (!nextEl && !latestEl && !bannerEl) return;
 
     loadEvents().then(function (events) {
       var upcoming = sortByDate(events.filter(function (e) { return isUpcoming(e.date); }), true);
@@ -172,6 +173,18 @@
         latestEl.innerHTML = past.length
           ? eventCard(past[0])
           : '<div class="empty-state">No past episodes published yet.</div>';
+      }
+      if (bannerEl) {
+        if (upcoming.length) {
+          var next = upcoming[0];
+          var kind = next.type === "live_event" ? "Live at " + (next.venue || "Oedipus Brewery") : "Next broadcast";
+          bannerEl.innerHTML =
+            '<span class="pulse-dot"></span>' +
+            kind + ": <strong>" + escapeHTML(next.title) + "</strong> &middot; " + formatDate(next.date);
+          bannerEl.style.display = "";
+        } else {
+          bannerEl.style.display = "none";
+        }
       }
     });
   }
