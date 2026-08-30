@@ -195,6 +195,16 @@ workflows rather than website features, so they're intentionally left as
 
 ## Adjusting the design further
 
+**Whenever you edit `assets/css/style.css` or `assets/js/site.js`, bump the
+`?v=N` query string** on every `<link>`/`<script>` tag that loads it (all 5
+`.html` files). GitHub Pages caches these files for 10 minutes
+(`cache-control: max-age=600`), so without a cache-buster, visitors who
+loaded the page just before your change can see new HTML paired with old
+CSS/JS for up to 10 minutes after you deploy — which is exactly how a
+missing style rule ends up looking like "nothing happened" or an unstyled
+element suddenly rendering huge. A one-line find-and-replace across the 5
+files (`style.css?v=1` → `?v=2`, same for `site.js`) is enough.
+
 Everything visual is controlled from a few places:
 
 - `assets/css/style.css` → the `:root { ... }` block at the top holds every
