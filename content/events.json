@@ -1,6 +1,46 @@
 {
   "events": [
     {
+      "id": "2026-10-24-echo-chambers",
+      "type": "broadcast",
+      "title": "Echo Chambers",
+      "guest": "Cristina Chueca del Cerro",
+      "date": "2026-10-24",
+      "tags": [
+        "Social Sciences",
+        "Media Studies",
+        "Polarization",
+        "Political Science"
+      ]
+    },
+    {
+      "id": "2026-10-21-gqom-at-oedipus-brewery",
+      "type": "live_event",
+      "title": "Gqom at Oedipus Brewery",
+      "guest": "Josephine Zwaan",
+      "date": "2026-10-21",
+      "tags": [
+        "Arts & Culture",
+        "Humanities",
+        "Music",
+        "Decolonial Theory"
+      ],
+      "venue": "Oedipus Brewery"
+    },
+    {
+      "id": "2026-09-26-fire-resilient-forests",
+      "type": "broadcast",
+      "title": "Fire-Resilient Forests",
+      "guest": "Fiona Thacker",
+      "date": "2026-09-26",
+      "tags": [
+        "Natural Sciences",
+        "Forestry",
+        "Climate Change",
+        "Ecology"
+      ]
+    },
+    {
       "id": "2026-07-04-lying-manipulation-with-logic",
       "type": "broadcast",
       "title": "Lying & Manipulation with Logic",
