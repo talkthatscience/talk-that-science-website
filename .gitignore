@@ -1,3 +1,7 @@
 .DS_Store
 node_modules/
 .env
+
+# Raw episode transcripts + source audio (~3.7GB) — used locally to write
+# summaries into content/events.json's description field, never committed.
+content/transcription/
