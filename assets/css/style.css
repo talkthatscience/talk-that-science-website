@@ -136,7 +136,7 @@ p { margin: 0 0 1em; }
   color: var(--ink);
   white-space: nowrap;
 }
-.brand img { height: 44px; width: auto; flex-shrink: 0; }
+.brand img { height: 68px; width: auto; flex-shrink: 0; }
 .brand:hover { color: var(--ink); }
 
 .main-nav {
@@ -167,6 +167,7 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 780px) {
   .nav-toggle { display: inline-flex; }
+  .brand img { height: 52px; }
   .main-nav {
     display: none;
     position: absolute;
