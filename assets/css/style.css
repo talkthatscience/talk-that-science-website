@@ -348,6 +348,24 @@ p { margin: 0 0 1em; }
   color: var(--muted);
 }
 
+.card-cover {
+  width: calc(100% + 3rem);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: -1.5rem -1.5rem 0;
+  border-radius: calc(var(--radius) - 2px) calc(var(--radius) - 2px) 0 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.guest-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ink);
+  flex-shrink: 0;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

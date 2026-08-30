@@ -134,11 +134,20 @@
       actions = '<span class="hint" style="color:var(--muted); font-size:0.85rem;">Slides / audio coming after the show</span>';
     }
 
+    var cover = event.themePhotoUrl
+      ? '<img class="card-cover" src="' + event.themePhotoUrl + '" alt="" />'
+      : "";
+
+    var guestAvatar = event.guestPhotoUrl
+      ? '<img class="guest-avatar" src="' + event.guestPhotoUrl + '" alt="" />'
+      : "";
+
     return (
       '<article class="card">' +
+      cover +
       '<div class="meta-row">' + badges + "</div>" +
       '<h3 class="card-title">' + escapeHTML(event.title) + "</h3>" +
-      '<div class="meta-row"><strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
+      '<div class="meta-row">' + guestAvatar + '<strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
       '<p class="card-desc">' + escapeHTML(event.description || "") + "</p>" +
       tagsHTML(event.tags) +
       audio +
