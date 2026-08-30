@@ -367,11 +367,15 @@ p { margin: 0 0 1em; }
 .tag {
   font-size: 0.72rem;
   color: var(--ink);
+  background: none;
   border: 1.5px solid var(--ink);
   border-radius: 999px;
   padding: 0.15rem 0.6rem;
   font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
 }
+.tag:hover { background: var(--c-yellow); }
 
 .card .card-title { margin: 0; }
 .card .card-desc { color: var(--muted); font-size: 0.92rem; margin: 0; }
@@ -430,19 +434,6 @@ p { margin: 0 0 1em; }
 }
 .tag-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .tag-search-count { font-size: 0.85rem; color: var(--muted); }
-
-/* Tags become clickable search shortcuts on the events hub only. */
-#upcoming-events-grid .tag,
-#past-events-grid .tag {
-  cursor: pointer;
-  background: none;
-  border: 1.5px solid var(--ink);
-  font: inherit;
-}
-#upcoming-events-grid .tag:hover,
-#past-events-grid .tag:hover {
-  background: var(--c-yellow);
-}
 
 .filter-btn.active,
 .filter-btn:hover {

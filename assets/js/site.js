@@ -7,6 +7,27 @@
 (function () {
   "use strict";
 
+  /* ---------------- tag buttons ---------------- */
+  // Every tag (badges under any event card, wherever eventCard() puts one)
+  // is a real <button data-tag="...">. On the Events hub, clicking one
+  // filters in place. Everywhere else, there's no search box to filter —
+  // so it navigates to the hub pre-filtered on that tag instead.
+  function initTagButtons() {
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".tag[data-tag]");
+      if (!btn) return;
+      var tag = btn.getAttribute("data-tag");
+      var searchInput = document.getElementById("tag-search-input");
+      if (searchInput) {
+        searchInput.value = tag;
+        searchInput.dispatchEvent(new Event("input"));
+        searchInput.focus();
+      } else {
+        window.location.href = "events.html?tag=" + encodeURIComponent(tag);
+      }
+    });
+  }
+
   /* ---------------- nav toggle ---------------- */
   function initNav() {
     var toggle = document.querySelector(".nav-toggle");
@@ -79,21 +100,19 @@
     return '<span class="badge badge-live">Live · ' + escapeHTML(event.venue || "Oedipus Brewery") + "</span>";
   }
 
-  function tagsHTML(tags, interactive) {
+  function tagsHTML(tags) {
     if (!tags || !tags.length) return "";
     return (
       '<div class="tag-row">' +
       tags.map(function (t) {
-        return interactive
-          ? '<button type="button" class="tag" data-tag="' + escapeHTML(t) + '">' + escapeHTML(t) + "</button>"
-          : '<span class="tag">' + escapeHTML(t) + "</span>";
+        return '<button type="button" class="tag" data-tag="' + escapeHTML(t) + '">' + escapeHTML(t) + "</button>";
       }).join("") +
       "</div>"
     );
   }
 
   /* ---------------- card rendering ---------------- */
-  function eventCard(event, interactiveTags) {
+  function eventCard(event) {
     var upcoming = isUpcoming(event.date);
     var badges = typeBadge(event) + (upcoming ? '<span class="badge badge-upcoming">Upcoming</span>' : "");
 
@@ -120,7 +139,7 @@
       '<h3 class="card-title">' + escapeHTML(event.title) + "</h3>" +
       '<div class="meta-row"><strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
       '<p class="card-desc">' + escapeHTML(event.description || "") + "</p>" +
-      tagsHTML(event.tags, interactiveTags) +
+      tagsHTML(event.tags) +
       audio +
       '<div class="card-actions">' + actions + "</div>" +
       "</article>"
@@ -194,17 +213,25 @@
 
       if (upcomingWrap) {
         upcomingWrap.innerHTML = upcoming.length
-          ? upcoming.map(function (e) { return eventCard(e, true); }).join("")
+          ? upcoming.map(eventCard).join("")
           : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "Nothing upcoming in this category yet.") + "</div>";
       }
       if (pastWrap) {
         pastWrap.innerHTML = past.length
-          ? past.map(function (e) { return eventCard(e, true); }).join("")
+          ? past.map(eventCard).join("")
           : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "No past entries in this category yet.") + "</div>";
       }
       if (countEl) {
         countEl.textContent = query ? filtered.length + " match" + (filtered.length === 1 ? "" : "es") : "";
       }
+    }
+
+    // A tag button clicked elsewhere on the site links here as
+    // events.html?tag=... — start pre-filtered on that tag.
+    var tagFromUrl = new URLSearchParams(window.location.search).get("tag");
+    if (tagFromUrl) {
+      currentQuery = tagFromUrl;
+      if (searchInput) searchInput.value = tagFromUrl;
     }
 
     loadEvents().then(function (events) {
@@ -228,22 +255,6 @@
         draw();
       });
     }
-
-    // Clicking a tag on a card jumps straight to searching that tag.
-    [upcomingWrap, pastWrap].forEach(function (wrap) {
-      if (!wrap) return;
-      wrap.addEventListener("click", function (e) {
-        var btn = e.target.closest(".tag");
-        if (!btn) return;
-        var tag = btn.getAttribute("data-tag");
-        if (searchInput) {
-          searchInput.value = tag;
-          searchInput.focus();
-        }
-        currentQuery = tag;
-        draw();
-      });
-    });
   }
 
   /* ---------------- page: calendar ---------------- */
@@ -314,6 +325,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initForms();
+    initTagButtons();
     renderHome();
     renderEventsHub();
     renderCalendar();
