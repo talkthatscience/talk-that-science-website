@@ -79,17 +79,21 @@
     return '<span class="badge badge-live">Live · ' + escapeHTML(event.venue || "Oedipus Brewery") + "</span>";
   }
 
-  function tagsHTML(tags) {
+  function tagsHTML(tags, interactive) {
     if (!tags || !tags.length) return "";
     return (
       '<div class="tag-row">' +
-      tags.map(function (t) { return '<span class="tag">' + escapeHTML(t) + "</span>"; }).join("") +
+      tags.map(function (t) {
+        return interactive
+          ? '<button type="button" class="tag" data-tag="' + escapeHTML(t) + '">' + escapeHTML(t) + "</button>"
+          : '<span class="tag">' + escapeHTML(t) + "</span>";
+      }).join("") +
       "</div>"
     );
   }
 
   /* ---------------- card rendering ---------------- */
-  function eventCard(event) {
+  function eventCard(event, interactiveTags) {
     var upcoming = isUpcoming(event.date);
     var badges = typeBadge(event) + (upcoming ? '<span class="badge badge-upcoming">Upcoming</span>' : "");
 
@@ -116,7 +120,7 @@
       '<h3 class="card-title">' + escapeHTML(event.title) + "</h3>" +
       '<div class="meta-row"><strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
       '<p class="card-desc">' + escapeHTML(event.description || "") + "</p>" +
-      tagsHTML(event.tags) +
+      tagsHTML(event.tags, interactiveTags) +
       audio +
       '<div class="card-actions">' + actions + "</div>" +
       "</article>"
@@ -165,26 +169,41 @@
     var pastWrap = document.getElementById("past-events-grid");
     if (!upcomingWrap && !pastWrap) return;
 
+    var searchInput = document.getElementById("tag-search-input");
+    var countEl = document.getElementById("tag-search-count");
+
     var currentFilter = "all";
+    var currentQuery = "";
     var allEvents = [];
 
+    function matchesQuery(event, query) {
+      if (!query) return true;
+      return (event.tags || []).some(function (t) {
+        return t.toLowerCase().indexOf(query) !== -1;
+      });
+    }
+
     function draw() {
+      var query = currentQuery.trim().toLowerCase();
       var filtered = allEvents.filter(function (e) {
-        if (currentFilter === "all") return true;
-        return e.type === currentFilter;
+        if (currentFilter !== "all" && e.type !== currentFilter) return false;
+        return matchesQuery(e, query);
       });
       var upcoming = sortByDate(filtered.filter(function (e) { return isUpcoming(e.date); }), true);
       var past = sortByDate(filtered.filter(function (e) { return !isUpcoming(e.date); }), false);
 
       if (upcomingWrap) {
         upcomingWrap.innerHTML = upcoming.length
-          ? upcoming.map(eventCard).join("")
-          : '<div class="empty-state">Nothing upcoming in this category yet.</div>';
+          ? upcoming.map(function (e) { return eventCard(e, true); }).join("")
+          : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "Nothing upcoming in this category yet.") + "</div>";
       }
       if (pastWrap) {
         pastWrap.innerHTML = past.length
-          ? past.map(eventCard).join("")
-          : '<div class="empty-state">No past entries in this category yet.</div>';
+          ? past.map(function (e) { return eventCard(e, true); }).join("")
+          : '<div class="empty-state">' + (query ? "No events tagged “" + escapeHTML(currentQuery.trim()) + "”." : "No past entries in this category yet.") + "</div>";
+      }
+      if (countEl) {
+        countEl.textContent = query ? filtered.length + " match" + (filtered.length === 1 ? "" : "es") : "";
       }
     }
 
@@ -199,6 +218,29 @@
         filterButtons.forEach(function (b) { b.classList.remove("active"); });
         btn.classList.add("active");
         currentFilter = btn.getAttribute("data-filter");
+        draw();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        currentQuery = searchInput.value;
+        draw();
+      });
+    }
+
+    // Clicking a tag on a card jumps straight to searching that tag.
+    [upcomingWrap, pastWrap].forEach(function (wrap) {
+      if (!wrap) return;
+      wrap.addEventListener("click", function (e) {
+        var btn = e.target.closest(".tag");
+        if (!btn) return;
+        var tag = btn.getAttribute("data-tag");
+        if (searchInput) {
+          searchInput.value = tag;
+          searchInput.focus();
+        }
+        currentQuery = tag;
         draw();
       });
     });
