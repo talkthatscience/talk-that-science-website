@@ -444,6 +444,7 @@ p { margin: 0 0 1em; }
 .about-hero { display: grid; gap: 2rem; }
 .icon-row {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
@@ -462,6 +463,14 @@ p { margin: 0 0 1em; }
 }
 .icon-chip svg { width: 22px; height: 22px; }
 .icon-chip-echobox img { height: 16px; width: auto; display: block; }
+
+/* Real partner/venue logos in the footer credit row. Sized individually
+   rather than to a shared height — each mark's own level of detail (a
+   plain wordmark vs. a full illustrated badge) needs a different minimum
+   size to actually stay legible. See pending-tasks/04. */
+.footer-logo { width: auto; display: block; }
+.footer-logo-oedipus { height: 72px; }
+.footer-logo-sic { height: 32px; }
 
 .placeholder-note {
   border-left: 4px solid var(--accent);
