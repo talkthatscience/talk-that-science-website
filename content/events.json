@@ -16,7 +16,7 @@
     },
     {
       "id": "2026-06-10-tts-panel-oedipus-craft-space-housing-the-people",
-      "type": "broadcast",
+      "type": "live_event",
       "title": "TTS Panel @Oedipus Craft Space: Housing the People",
       "guest": "Lilit Zeltsburg",
       "date": "2026-06-10",
@@ -26,6 +26,7 @@
         "Housing",
         "Political Science"
       ],
+      "venue": "Oedipus Craft Space",
       "description": "Why Europe's housing crisis is less about supply than lost community and trust, debunking myths about immigration and homeownership, and what historic Amsterdam and Vienna housing models still teach us."
     },
     {

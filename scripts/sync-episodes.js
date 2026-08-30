@@ -92,7 +92,7 @@ function main() {
   const merged = generated.map((gen) => {
     const prev = existingById.get(gen.id);
     if (!prev) return gen;
-    const { id, type, title, guest, date, tags, ...extras } = prev;
+    const { id, title, guest, date, tags, ...extras } = prev;
     return { ...gen, ...extras };
   });
 
