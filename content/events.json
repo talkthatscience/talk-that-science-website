@@ -1,131 +1,351 @@
 {
   "events": [
     {
-      "id": "2026-04-16-microplastics",
+      "id": "2026-07-04-lying-manipulation-with-logic",
       "type": "broadcast",
-      "title": "3D Printing In Space",
-      "guest": "Dr. Théo Marchal",
-      "date": "2026-04-16",
+      "title": "Lying & Manipulation with Logic",
+      "guest": "Djanira Gomes",
+      "date": "2026-07-04",
       "tags": [
-        "space",
-        "engineering",
-        "materials"
-      ],
-      "description": "Why gravity changes everything about additive manufacturing, and what's already been printed in orbit.",
-      "excerptAudioUrl": "assets/media/excerpt-microplastics.mp3",
-      "slideUrl": null,
-      "episodeLink": "https://soundcloud.com/talkthatscience/3d-printing-in-space-echoboxradio"
+        "Humanities",
+        "Logic",
+        "Epistemology",
+        "Philosophy"
+      ]
     },
     {
-      "id": "2026-05-12-ai-trust-broadcast",
+      "id": "2026-06-10-tts-panel-oedipus-craft-space-housing-the-people",
       "type": "broadcast",
-      "title": "Political Trust in the Age of AI",
-      "guest": "Prof. Amara Idowu",
-      "date": "2026-05-12",
+      "title": "TTS Panel @Oedipus Craft Space: Housing the People",
+      "guest": "Lilit Zeltsburg",
+      "date": "2026-06-10",
       "tags": [
-        "ai",
-        "politics",
-        "society"
-      ],
-      "description": "What happens to public trust when AI enters the newsroom and the ballot box.",
-      "excerptAudioUrl": "assets/media/excerpt-ai-trust.mp3",
-      "slideUrl": null,
-      "episodeLink": "https://soundcloud.com/talkthatscience/political-trust-echobox-radio"
+        "Social Sciences",
+        "Urban Studies",
+        "Housing",
+        "Political Science"
+      ]
     },
     {
-      "id": "2026-06-18-quantum-bar",
-      "type": "live_event",
-      "title": "Quantum Computing & Cold Coffee",
-      "guest": "Dr. Lena Voss",
-      "date": "2026-06-18",
-      "venue": "Oedipus Brewery",
-      "tags": [
-        "physics",
-        "computing"
-      ],
-      "description": "A live Science Bar Talk on decoherence, qubits, and why your espresso machine understands thermodynamics better than most quantum hardware.",
-      "excerptAudioUrl": "assets/media/excerpt-quantum-coffee.mp3",
-      "slideUrl": "assets/media/slides-quantum-coffee.pdf",
-      "episodeLink": null
-    },
-    {
-      "id": "2026-07-14-coral-broadcast",
+      "id": "2026-06-06-how-to-change-21st-century-minds",
       "type": "broadcast",
-      "title": "Exoten in Amsterdam's Canals",
-      "guest": "Dr. Femke Bruggen",
-      "date": "2026-07-14",
+      "title": "How to Change 21st Century Minds",
+      "guest": "Sarah Stein Lubrano",
+      "date": "2026-06-06",
       "tags": [
-        "ecology",
-        "urban science"
-      ],
-      "description": "Mapping the new arrivals in the city's canal ecosystem and what they mean for the local food web.",
-      "excerptAudioUrl": "assets/media/excerpt-coral-reefs.mp3",
-      "slideUrl": null,
-      "episodeLink": "https://soundcloud.com/talkthatscience/exoten-in-amsterdam-echobox-radio"
+        "Social Sciences",
+        "Psychology",
+        "Political Science"
+      ]
     },
     {
-      "id": "2026-08-06-coral-bar",
-      "type": "live_event",
-      "title": "Exoten in Amsterdam's Canals — Live",
-      "guest": "Dr. Femke Bruggen",
-      "date": "2026-08-06",
-      "venue": "Oedipus Brewery",
-      "tags": [
-        "ecology",
-        "urban science"
-      ],
-      "description": "The live bar-night follow-up: audience-submitted canal sightings, live-identified.",
-      "excerptAudioUrl": "assets/media/excerpt-coral-reefs.mp3",
-      "slideUrl": "assets/media/slides-coral-reefs.pdf",
-      "episodeLink": null
-    },
-    {
-      "id": "2026-09-08-ai-trust-bar",
-      "type": "live_event",
-      "title": "Political Trust in the Age of AI — Live",
-      "guest": "Prof. Amara Idowu",
-      "date": "2026-09-08",
-      "venue": "Oedipus Brewery",
-      "tags": [
-        "ai",
-        "politics",
-        "society"
-      ],
-      "description": "Bring your best skeptical question — live panel and open discussion, no jargon left unexplained.",
-      "excerptAudioUrl": "assets/media/excerpt-ai-trust.mp3",
-      "slideUrl": "assets/media/slides-ai-trust.pdf",
-      "episodeLink": null
-    },
-    {
-      "id": "2026-09-24-broadcast-upcoming",
+      "id": "2026-05-09-listening-as-an-art-and-learning-method",
       "type": "broadcast",
-      "title": "The Microplastics In Your Kitchen",
-      "guest": "Dr. Sanne Kuipers",
-      "date": "2026-09-24",
+      "title": "Listening as an Art and Learning Method",
+      "guest": "Chalice Cox-Hynd, Femke Dekker",
+      "date": "2026-05-09",
       "tags": [
-        "chemistry",
-        "health"
-      ],
-      "description": "What we actually know (and don't) about microplastics in everyday food packaging.",
-      "excerptAudioUrl": null,
-      "slideUrl": null,
-      "episodeLink": null
+        "Arts & Culture",
+        "Humanities",
+        "Sound Art",
+        "Gender Studies",
+        "Decolonial Theory"
+      ]
     },
     {
-      "id": "2026-10-29-quantum-bar-2",
-      "type": "live_event",
-      "title": "Quantum Computing & Cold Coffee — Part II",
-      "guest": "Dr. Lena Voss",
-      "date": "2026-10-29",
-      "venue": "Oedipus Brewery",
+      "id": "2026-04-11-jewish-answer-to-colonialism-and-barbarism",
+      "type": "broadcast",
+      "title": "Jewish Answer to Colonialism and Barbarism",
+      "guest": "Yonathan Listik",
+      "date": "2026-04-11",
       "tags": [
-        "physics",
-        "computing"
-      ],
-      "description": "The sequel bar night: what changed in five months of qubit research, and audience-submitted questions from Part I.",
-      "excerptAudioUrl": null,
-      "slideUrl": null,
-      "episodeLink": null
+        "Humanities",
+        "Decolonial Theory",
+        "Philosophy",
+        "Religion"
+      ]
+    },
+    {
+      "id": "2026-02-14-feminist-approaches-to-logic",
+      "type": "broadcast",
+      "title": "Feminist Approaches to Logic",
+      "guest": "Rebecca Kosten",
+      "date": "2026-02-14",
+      "tags": [
+        "Humanities",
+        "Logic",
+        "Gender Studies",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": "2026-01-17-hormones-alcohol-cognition",
+      "type": "broadcast",
+      "title": "Hormones, Alcohol & Cognition",
+      "guest": "Laia Alonso-Marmelstein",
+      "date": "2026-01-17",
+      "tags": [
+        "Medicine & Health",
+        "Natural Sciences",
+        "Neuroscience",
+        "Health",
+        "Gender Studies"
+      ]
+    },
+    {
+      "id": "2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought",
+      "type": "broadcast",
+      "title": "Decolonializing Decolonialization – Questions from Rabbinical Thought",
+      "guest": "Yonathan Buskila Listik",
+      "date": "2025-10-24",
+      "tags": [
+        "Humanities",
+        "Decolonial Theory",
+        "Philosophy",
+        "Religion",
+        "Political Science"
+      ]
+    },
+    {
+      "id": "2025-09-26-futuristic-to-whom-the-sound-of-gqom-and-south-african-electro-music",
+      "type": "broadcast",
+      "title": "Futuristic – To Whom? The Sound of Gqom and South African Electro Music",
+      "guest": "Josephine Zwaan",
+      "date": "2025-09-26",
+      "tags": [
+        "Arts & Culture",
+        "Humanities",
+        "Music",
+        "Decolonial Theory"
+      ]
+    },
+    {
+      "id": "2025-08-01-forensic-psychology",
+      "type": "broadcast",
+      "title": "Forensic Psychology",
+      "guest": "Eva Billen",
+      "date": "2025-08-01",
+      "tags": [
+        "Social Sciences",
+        "Medicine & Health",
+        "Psychology",
+        "Forensic Science"
+      ]
+    },
+    {
+      "id": "2025-07-04-the-applications-of-quantum-computers",
+      "type": "broadcast",
+      "title": "The Applications of Quantum Computers",
+      "guest": "Malte Schade",
+      "date": "2025-07-04",
+      "tags": [
+        "Computer Science",
+        "Natural Sciences",
+        "Quantum Computing",
+        "Earth Science"
+      ]
+    },
+    {
+      "id": "2025-06-06-ai-for-sign-language",
+      "type": "broadcast",
+      "title": "AI for Sign Language",
+      "guest": "Oline Ranum",
+      "date": "2025-06-06",
+      "tags": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Accessibility",
+        "Linguistics"
+      ]
+    },
+    {
+      "id": "2025-05-09-animal-spirits-and-arational-behaviour",
+      "type": "broadcast",
+      "title": "Animal Spirits and Arational Behaviour",
+      "guest": "Ella Needler",
+      "date": "2025-05-09",
+      "tags": [
+        "Economics",
+        "Humanities",
+        "Behavioral Science",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": "2025-04-24-can-ai-decode-sound",
+      "type": "broadcast",
+      "title": "Can AI Decode Sound?",
+      "guest": "Marianne de heer Kloots",
+      "date": "2025-04-24",
+      "tags": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Linguistics"
+      ]
+    },
+    {
+      "id": "2025-03-14-breaking-up-the-glass-ceiling-female-leadership-in-economics",
+      "type": "broadcast",
+      "title": "Breaking Up the Glass Ceiling: Female Leadership in Economics",
+      "guest": "Kaneta Zilluer",
+      "date": "2025-03-14",
+      "tags": [
+        "Economics",
+        "Social Sciences",
+        "Gender Studies"
+      ]
+    },
+    {
+      "id": "2025-02-14-political-mistrust-and-its-causes",
+      "type": "broadcast",
+      "title": "Political Mistrust and its Causes",
+      "guest": "Giovanni D'Agostino, Hannes Bey",
+      "date": "2025-02-14",
+      "tags": [
+        "Social Sciences",
+        "Political Science"
+      ]
+    },
+    {
+      "id": "2025-01-17-pluralistic-logic",
+      "type": "broadcast",
+      "title": "Pluralistic Logic",
+      "guest": "Erik Stei",
+      "date": "2025-01-17",
+      "tags": [
+        "Humanities",
+        "Logic",
+        "Philosophy",
+        "Epistemology"
+      ]
+    },
+    {
+      "id": "2024-11-22-understanding-glaciers-through-satellites",
+      "type": "broadcast",
+      "title": "Understanding Glaciers through Satellites",
+      "guest": "Marion Dugue",
+      "date": "2024-11-22",
+      "tags": [
+        "Natural Sciences",
+        "Earth Science",
+        "Climate Change"
+      ]
+    },
+    {
+      "id": "2024-10-25-what-is-quantum-computing",
+      "type": "broadcast",
+      "title": "What is Quantum Computing?",
+      "guest": "Pablo Cova Farina",
+      "date": "2024-10-25",
+      "tags": [
+        "Computer Science",
+        "Natural Sciences",
+        "Quantum Computing"
+      ]
+    },
+    {
+      "id": "2024-09-06-what-is-an-equal-city",
+      "type": "broadcast",
+      "title": "What is an Equal City?",
+      "guest": "Elisabetta Gobbo",
+      "date": "2024-09-06",
+      "tags": [
+        "Social Sciences",
+        "Urban Studies",
+        "Housing",
+        "Political Science"
+      ]
+    },
+    {
+      "id": "2024-08-02-our-revolution-for-the-orient",
+      "type": "broadcast",
+      "title": "Our Revolution for the Orient",
+      "guest": "Lilit Zeltsburg",
+      "date": "2024-08-02",
+      "tags": [
+        "Humanities",
+        "Media Studies",
+        "History",
+        "Political Science"
+      ]
+    },
+    {
+      "id": "2024-07-05-the-evolution-of-depression",
+      "type": "broadcast",
+      "title": "The Evolution of Depression",
+      "guest": "Annemie Ploeger",
+      "date": "2024-07-05",
+      "tags": [
+        "Natural Sciences",
+        "Medicine & Health",
+        "Psychology",
+        "Health"
+      ]
+    },
+    {
+      "id": "2024-06-07-conspiracy-theories-as-a-political-tool",
+      "type": "broadcast",
+      "title": "Conspiracy Theories as a Political Tool",
+      "guest": "Giulia Napolitano",
+      "date": "2024-06-07",
+      "tags": [
+        "Humanities",
+        "Social Sciences",
+        "Epistemology",
+        "Political Science",
+        "Media Studies"
+      ]
+    },
+    {
+      "id": "2024-04-19-sexual-double-standards",
+      "type": "broadcast",
+      "title": "Sexual Double Standards",
+      "guest": "Gijsje Maas",
+      "date": "2024-04-19",
+      "tags": [
+        "Social Sciences",
+        "Gender Studies",
+        "Psychology",
+        "Media Studies"
+      ]
+    },
+    {
+      "id": "2024-03-22-a-logical-brain",
+      "type": "broadcast",
+      "title": "A Logical Brain",
+      "guest": "Nick Bezhanishvili",
+      "date": "2024-03-22",
+      "tags": [
+        "Humanities",
+        "Logic",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": "2024-02-15-menstruation-in-space",
+      "type": "broadcast",
+      "title": "Menstruation in Space",
+      "guest": "Marion Dugue",
+      "date": "2024-02-15",
+      "tags": [
+        "Natural Sciences",
+        "Medicine & Health",
+        "Space Science",
+        "Health",
+        "Gender Studies"
+      ]
+    },
+    {
+      "id": "2024-01-18-coral-reefs",
+      "type": "broadcast",
+      "title": "Coral Reefs",
+      "guest": "Sarah Solomon, René Zande",
+      "date": "2024-01-18",
+      "tags": [
+        "Natural Sciences",
+        "Marine Biology",
+        "Climate Change"
+      ]
     }
   ]
 }

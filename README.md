@@ -46,14 +46,11 @@ would be needed.
   - The Echobox player on the homepage (`#echobox-player`) currently links
     out to the live stream — swap it for Echobox's official embed/widget
     code if/when they provide one.
-  - The Oedipus Brewery / Echobox footer icons are generic line-icons, not
-    official logos — swap them for the real marks if you have usage rights.
-  - All 8 sample events in `content/events.json`, including guest names,
-    are fictional so you can see the full layout working end-to-end. Delete
-    or edit them from `/admin` once real dates are confirmed.
-  - Sample MP3 excerpts and PDF slide decks in `assets/media/` are
-    generated placeholders (a soft tone + a labelled slide deck), just so
-    every "play excerpt" / "view slides" button actually works in the demo.
+  - `content/events.json` now holds the 27 real episodes from
+    `data/episodes.jsonl` (see "Episode data" below), but none of them have
+    a description, excerpt audio, or slide deck yet — those still need
+    filling in via `/admin` as they become available. Sample MP3s/PDFs from
+    the original demo are still sitting in `assets/media/`, now unused.
   - The four `action="https://formspree.io/f/YOUR_FORM_ID"` attributes (three
     forms in `get-involved.html`, the newsletter box in `index.html`) need
     your real Formspree form IDs — see "Forms" below.
@@ -72,9 +69,14 @@ calendar.html            Chronological list of upcoming broadcasts + events
 about.html                About Talk That Science
 get-involved.html         3 forms: topic suggestion, event review, volunteer
 admin/                   Decap CMS (config.yml + index.html)
+data/
+  episodes.jsonl          Source-of-truth episode facts — see "Episode data"
+scripts/
+  sync-episodes.js        Regenerates content/events.json from episodes.jsonl
 content/
   settings.json           Site-wide text (tagline, venue, about copy, links)
-  events.json             Every event/broadcast — edited via /admin
+  events.json             What the site actually renders — edited via
+                          /admin, and via episodes.jsonl for core facts
 assets/
   css/style.css           All styling + the colour variables
   js/site.js              Fetches content/*.json and renders it into pages
@@ -86,6 +88,44 @@ assets/
 There's no templating engine and no build step on purpose: the CMS commits
 plain JSON to `content/`, and a small script (`assets/js/site.js`) fetches
 that JSON in the browser and renders it. Deploy = push these files as-is.
+
+## Episode data
+
+`data/episodes.jsonl` is the source of truth for each episode's core
+facts — one JSON object per line:
+
+```json
+{"episode_number": 20, "date": "2024-01-18", "title": "Coral Reefs", "guests": ["Sarah Solomon", "René Zande"], "faculties": ["Natural Sciences"], "topics": ["marine-biology", "climate-change"]}
+```
+
+The site itself never reads this file directly — it fetches
+`content/events.json`, same as always. `scripts/sync-episodes.js` bridges
+the two: it converts each episode into the site's event shape (joining
+`guests` into one string, combining `faculties` + `topics` into `tags`,
+deriving an `id` from the date + slugified title) and writes the result
+into `content/events.json`.
+
+**To add a new episode:**
+
+1. Append a line to `data/episodes.jsonl`.
+2. Run `node scripts/sync-episodes.js` (no dependencies to install — plain
+   Node).
+3. Commit both files, then add the description/excerpt audio/slides for
+   the new event via `/admin`, same as any other event.
+
+The script is safe to re-run any time and won't clobber CMS work: for an
+event whose `id` already exists in `content/events.json`, it refreshes
+only the core fields (title/date/guest/tags) and leaves `description`,
+`excerptAudioUrl`, `slideUrl`, `episodeLink`, `venue`, and `type` exactly
+as they were. Anything in `content/events.json` that doesn't come from
+`episodes.jsonl` at all — e.g. a live Oedipus bar night you added by hand,
+which has no episode number — is left completely untouched.
+
+One thing the script can't know: `episodes.jsonl` has no field
+distinguishing a live bar night from a radio broadcast, so every synced
+event defaults to `type: "broadcast"`. Fix individual ones to "Live Bar
+Talk" (+ venue) via `/admin` where that's wrong — see
+`pending-tasks/05-real-event-content.md`.
 
 ## Deploying (GitHub Pages, ~5 minutes)
 
