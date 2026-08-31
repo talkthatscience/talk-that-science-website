@@ -153,6 +153,12 @@
         "Religion",
         "Political Science"
       ],
+      "guestPhotos": [
+        {
+          "name": "Yonathan Buskila Listik",
+          "photoUrl": "assets/media/2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought/profile.jpg"
+        }
+      ],
       "description": "How rethinking stupidity, intelligence, and civilization exposes the hidden colonial logic still shaping democracy, capitalism, and Jewish thought today."
     },
     {
@@ -167,7 +173,14 @@
         "Music",
         "Decolonial Theory"
       ],
-      "description": "Josephine Zwaan discusses her research on gqom, exploring how South African producers understand rhythm, dance, and futurism differently from Western listeners who project sci-fi meaning onto the genre."
+      "guestPhotos": [
+        {
+          "name": "Josephine Zwaan",
+          "photoUrl": "assets/media/2025-09-26-futuristic-to-whom-the-sound-of-gqom-and-south-african-electro-music/images.jpg"
+        }
+      ],
+      "description": "Josephine Zwaan discusses her research on gqom, exploring how South African producers understand rhythm, dance, and futurism differently from Western listeners who project sci-fi meaning onto the genre.",
+      "themePhotoUrl": "assets/media/2025-09-26-futuristic-to-whom-the-sound-of-gqom-and-south-african-electro-music/cover.jpg"
     },
     {
       "id": "2025-08-01-forensic-psychology",
@@ -181,7 +194,14 @@
         "Psychology",
         "Forensic Science"
       ],
-      "description": "Forensic psychologist Eva Billen on why self-control shifts over time in offenders, how researchers try to measure it, and what teen misbehavior reveals about adult self-regulation."
+      "guestPhotos": [
+        {
+          "name": "Eva Billen",
+          "photoUrl": "assets/media/2025-08-01-forensic-psychology/profile.jpg"
+        }
+      ],
+      "description": "Forensic psychologist Eva Billen on why self-control shifts over time in offenders, how researchers try to measure it, and what teen misbehavior reveals about adult self-regulation.",
+      "themePhotoUrl": "assets/media/2025-08-01-forensic-psychology/cover.jpg"
     },
     {
       "id": "2025-07-04-the-applications-of-quantum-computers",
@@ -195,7 +215,14 @@
         "Quantum Computing",
         "Earth Science"
       ],
-      "description": "A geoscientist explains how he translates earthquake and acoustic wave equations into quantum algorithms with Google, why quantum computers excel at some calculations but not others, and what breakthroughs could mean for medical imaging and subsurface exploration."
+      "guestPhotos": [
+        {
+          "name": "Malte Schade",
+          "photoUrl": "assets/media/2025-07-04-the-applications-of-quantum-computers/profile.jpg"
+        }
+      ],
+      "description": "A geoscientist explains how he translates earthquake and acoustic wave equations into quantum algorithms with Google, why quantum computers excel at some calculations but not others, and what breakthroughs could mean for medical imaging and subsurface exploration.",
+      "themePhotoUrl": "assets/media/2025-07-04-the-applications-of-quantum-computers/cover.png"
     },
     {
       "id": "2025-06-06-ai-for-sign-language",
@@ -209,7 +236,14 @@
         "Accessibility",
         "Linguistics"
       ],
-      "description": "Oline Ranum explains why translating between spoken and sign languages is such a hard AI problem, and how 3D geometry, symmetry, and linguistic structure could help models finally learn it."
+      "guestPhotos": [
+        {
+          "name": "Oline Ranum",
+          "photoUrl": "assets/media/2025-06-06-ai-for-sign-language/profile.jpg"
+        }
+      ],
+      "description": "Oline Ranum explains why translating between spoken and sign languages is such a hard AI problem, and how 3D geometry, symmetry, and linguistic structure could help models finally learn it.",
+      "themePhotoUrl": "assets/media/2025-06-06-ai-for-sign-language/cover.png"
     },
     {
       "id": "2025-05-09-animal-spirits-and-arational-behaviour",
@@ -223,7 +257,14 @@
         "Behavioral Science",
         "Philosophy"
       ],
-      "description": "How economists separate true uncertainty from calculable risk, and why pension scenario modelling now maps a wide range of possible futures instead of forecasting one likely outcome."
+      "guestPhotos": [
+        {
+          "name": "Ella Needler",
+          "photoUrl": "assets/media/2025-05-09-animal-spirits-and-arational-behaviour/profile.jpg"
+        }
+      ],
+      "description": "How economists separate true uncertainty from calculable risk, and why pension scenario modelling now maps a wide range of possible futures instead of forecasting one likely outcome.",
+      "themePhotoUrl": "assets/media/2025-05-09-animal-spirits-and-arational-behaviour/cover.jpg"
     },
     {
       "id": "2025-04-24-can-ai-decode-sound",
