@@ -291,6 +291,12 @@
         "Philosophy",
         "Epistemology"
       ],
+      "guestPhotos": [
+        {
+          "name": "Erik Stei",
+          "photoUrl": "assets/media/2025-01-17-pluralistic-logic/profile.jpg"
+        }
+      ],
       "description": "Whether logic has one correct system or many, and how a philosopher defends the idea that competing logics can each be valid on their own terms.",
       "episodeLink": "https://media.echobox.radio/2025/01/Talk%20That%20Science-%20Pluralistic%20Logic%20w%3A%20Erik%20Stei%20-%20%2330%20-%2017-01-25.mp3"
     },
@@ -380,6 +386,12 @@
         "Political Science",
         "Media Studies"
       ],
+      "guestPhotos": [
+        {
+          "name": "Giulia Napolitano",
+          "photoUrl": "assets/media/2024-06-07-conspiracy-theories-as-a-political-tool/profile.png"
+        }
+      ],
       "description": "How political actors exploit conspiracy theories by weaponizing their flexibility against evidence, and how belief in a secret plot builds trust networks that shift from personal skepticism into extremist ideology.",
       "episodeLink": "https://media.echobox.radio/2024/06/Talk%20That%20Science%20Conspiracy%20Theories%20as%20a%20Political%20Tool%20w%20Giulia%20Napolitano.mp3"
     },
@@ -395,6 +407,12 @@
         "Psychology",
         "Media Studies"
       ],
+      "guestPhotos": [
+        {
+          "name": "Gijsje Maas",
+          "photoUrl": "assets/media/2024-04-19-sexual-double-standards/profile.jpg"
+        }
+      ],
       "description": "How the sexual double standard shapes what we expect from men and women in bed, why it persists even when people privately disagree, and what media could do to change it.",
       "episodeLink": "https://media.echobox.radio/2024/04/Talk%20That%20Science%20%2323%20Sexual%20Double%20Standards%20w%20Gijsje%20Maas%20-%20Nicolien%20Janssens%2C%20Evelien%20Wooning%20%26%20Nikki%20Weststeijn%20-%2019-04-24.mp3"
     },
@@ -409,7 +427,14 @@
         "Logic",
         "Philosophy"
       ],
+      "guestPhotos": [
+        {
+          "name": "Nick Bezhanishvili",
+          "photoUrl": "assets/media/2024-03-22-a-logical-brain/profile.jpg"
+        }
+      ],
       "description": "How logic, algebra, and geometry intersect, and why a mathematician studying formal reasoning turned to polyhedral shapes to model three-dimensional space.",
+      "themePhotoUrl": "assets/media/2024-03-22-a-logical-brain/cover.png",
       "episodeLink": "https://media.echobox.radio/2024/04/Talk%20That%20Science%20%2322%20A%20Logical%20Brain%20w%20Nick%20Bezhanishvili%20-%20Nicolien%20Janssens%2C%20Evelien%20Wooning%20%26%20Nikki%20Weststeijn%20-%2022-03-24.mp3"
     },
     {
