@@ -249,7 +249,14 @@
         "Artificial Intelligence",
         "Linguistics"
       ],
+      "guestPhotos": [
+        {
+          "name": "Marianne de heer Kloots",
+          "photoUrl": "assets/media/2025-04-24-can-ai-decode-sound/profile.jpg"
+        }
+      ],
       "description": "How AI models trained on human speech encode sound into vectors, and what happens when those same models are used to analyze bat calls and Dutch phoneme structure.",
+      "themePhotoUrl": "assets/media/2025-04-24-can-ai-decode-sound/cover.png",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -263,7 +270,14 @@
         "Social Sciences",
         "Gender Studies"
       ],
+      "guestPhotos": [
+        {
+          "name": "Kaneta Zilluer",
+          "photoUrl": "assets/media/2025-03-14-breaking-up-the-glass-ceiling-female-leadership-in-economics/profile.jpg"
+        }
+      ],
       "description": "How the Women in Economics Index tracks female leadership across academia, business, and government, and why Africa currently outranks Europe and North America on representation.",
+      "themePhotoUrl": "assets/media/2025-03-14-breaking-up-the-glass-ceiling-female-leadership-in-economics/cover.avif",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -287,6 +301,7 @@
         }
       ],
       "description": "Two political trust researchers explain how mistrust differs from distrust, why civic education and life experience shape it, and what falling trust means for democracy and rising populism.",
+      "themePhotoUrl": "assets/media/2025-02-14-political-mistrust-and-its-causes/cover.webp",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
