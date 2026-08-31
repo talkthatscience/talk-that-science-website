@@ -146,11 +146,16 @@
         "</span>"
       : "";
 
+    var titleText = escapeHTML(event.title);
+    var title = event.episodeLink
+      ? '<a href="' + event.episodeLink + '" target="_blank" rel="noopener">' + titleText + "</a>"
+      : titleText;
+
     return (
       '<article class="card">' +
       cover +
       '<div class="meta-row">' + badges + "</div>" +
-      '<h3 class="card-title">' + escapeHTML(event.title) + "</h3>" +
+      '<h3 class="card-title">' + title + "</h3>" +
       '<div class="meta-row">' + guestAvatars + '<strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
       '<p class="card-desc">' + escapeHTML(event.description || "") + "</p>" +
       tagsHTML(event.tags) +

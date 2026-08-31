@@ -407,6 +407,8 @@ p { margin: 0 0 1em; }
 .tag:hover { background: var(--c-yellow); }
 
 .card .card-title { margin: 0; }
+.card .card-title a { color: inherit; text-decoration: none; }
+.card .card-title a:hover { text-decoration: underline; }
 .card .card-desc { color: var(--muted); font-size: 0.92rem; margin: 0; }
 
 .card audio { width: 100%; margin-top: 0.25rem; }
