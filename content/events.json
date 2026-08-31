@@ -80,7 +80,14 @@
         "Psychology",
         "Political Science"
       ],
-      "description": "Why debates and protests rarely change minds, and what actually does—close relationships, lived experience, and rebuilding the everyday social spaces we've let disappear."
+      "guestPhotos": [
+        {
+          "name": "Sarah Stein Lubrano",
+          "photoUrl": "assets/media/2026-06-06-how-to-change-21st-century-minds/profile.jpg"
+        }
+      ],
+      "description": "Why debates and protests rarely change minds, and what actually does—close relationships, lived experience, and rebuilding the everyday social spaces we've let disappear.",
+      "themePhotoUrl": "assets/media/2026-06-06-how-to-change-21st-century-minds/cover.jpg"
     },
     {
       "id": "2026-05-09-listening-as-an-art-and-learning-method",
@@ -95,7 +102,18 @@
         "Gender Studies",
         "Decolonial Theory"
       ],
-      "description": "How a sound artist and a radio broadcaster explore listening as an active, collective practice, tracing deep listening's roots and jamming's power to include outsiders and challenge academic norms."
+      "guestPhotos": [
+        {
+          "name": "Femke Dekker",
+          "photoUrl": "assets/media/2026-05-09-listening-as-an-art-and-learning-method/profile.jpg"
+        },
+        {
+          "name": "Chalice Cox-Hynd",
+          "photoUrl": "assets/media/2026-05-09-listening-as-an-art-and-learning-method/profile-2.webp"
+        }
+      ],
+      "description": "How a sound artist and a radio broadcaster explore listening as an active, collective practice, tracing deep listening's roots and jamming's power to include outsiders and challenge academic norms.",
+      "themePhotoUrl": "assets/media/2026-05-09-listening-as-an-art-and-learning-method/cover.avif"
     },
     {
       "id": "2026-04-11-jewish-answer-to-colonialism-and-barbarism",
@@ -130,7 +148,14 @@
         "Gender Studies",
         "Philosophy"
       ],
-      "description": "How philosopher Rebecca Kosten uses Audre Lorde's writing to question whether classical logic's claim to objectivity is truly neutral, and what a feminist approach to formal reasoning could look like instead."
+      "guestPhotos": [
+        {
+          "name": "Rebecca Kosten",
+          "photoUrl": "assets/media/2026-02-14-feminist-approaches-to-logic/profile.png"
+        }
+      ],
+      "description": "How philosopher Rebecca Kosten uses Audre Lorde's writing to question whether classical logic's claim to objectivity is truly neutral, and what a feminist approach to formal reasoning could look like instead.",
+      "themePhotoUrl": "assets/media/2026-02-14-feminist-approaches-to-logic/cover.jpeg"
     },
     {
       "id": "2026-01-17-hormones-alcohol-cognition",
