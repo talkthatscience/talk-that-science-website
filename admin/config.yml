@@ -120,4 +120,3 @@ collections:
               - { label: "Theme Photo", name: "themePhotoUrl", widget: "image", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop an image capturing the episode's topic — shows as the card's cover image" }
               - { label: "Excerpt Audio", name: "excerptAudioUrl", widget: "file", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop an mp3 — plays on the Events & Slides page" }
               - { label: "Slide Deck (PDF)", name: "slideUrl", widget: "file", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop a PDF — shows a 'View Slides' button" }
-              - { label: "External Episode Link", name: "episodeLink", widget: "string", required: false, hint: "e.g. SoundCloud/Spotify link for broadcasts" }

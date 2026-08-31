@@ -95,8 +95,14 @@ that JSON in the browser and renders it. Deploy = push these files as-is.
 facts — one JSON object per line:
 
 ```json
-{"episode_number": 20, "date": "2024-01-18", "title": "Coral Reefs", "guests": ["Sarah Solomon", "René Zande"], "faculties": ["Natural Sciences"], "topics": ["marine-biology", "climate-change"]}
+{"episode_number": 20, "date": "2024-01-18", "title": "Coral Reefs", "guests": ["Sarah Solomon", "René Zande"], "faculties": ["Natural Sciences"], "topics": ["marine-biology", "climate-change"], "url": "https://..."}
 ```
+
+`url` is the episode's real listen-back link — fill it in by hand once
+you know it (`null` until then). It's the one field here that maps
+straight to a display field (`episodeLink`, used for the card title link
+and the "Listen on Echobox" button) rather than getting combined/reshaped
+— see why below.
 
 The site itself never reads this file directly — it fetches
 `content/events.json`, same as always. `scripts/sync-episodes.js` bridges
@@ -115,9 +121,12 @@ into `content/events.json`.
 
 The script is safe to re-run any time and won't clobber CMS work: for an
 event whose `id` already exists in `content/events.json`, it refreshes
-only the core fields (title/date/guest/tags) and leaves `description`,
-`excerptAudioUrl`, `slideUrl`, `episodeLink`, `venue`, and `type` exactly
-as they were. Anything in `content/events.json` that doesn't come from
+the core fields (title/date/guest/tags/**episodeLink**) and leaves
+`description`, `excerptAudioUrl`, `slideUrl`, `guestPhotos`,
+`themePhotoUrl`, `venue`, and `type` exactly as they were. **episodeLink
+is sourced from `url` in episodes.jsonl, not from `/admin`** — edit it
+there, not in the CMS, since a CMS edit would just get overwritten on the
+next sync. Anything in `content/events.json` that doesn't come from
 `episodes.jsonl` at all — e.g. a live Oedipus bar night you added by hand,
 which has no episode number — is left completely untouched.
 
