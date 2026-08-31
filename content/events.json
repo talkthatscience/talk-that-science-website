@@ -52,7 +52,14 @@
         "Epistemology",
         "Philosophy"
       ],
-      "description": "What it takes to formalize lying and untrustworthy belief in logic, from Gettier's knowledge puzzles to geometric shapes built to model networks of unreliable computers."
+      "guestPhotos": [
+        {
+          "name": "Djanira Gomes",
+          "photoUrl": "assets/media/2026-07-04-lying-manipulation-with-logic/profile.jpg"
+        }
+      ],
+      "description": "What it takes to formalize lying and untrustworthy belief in logic, from Gettier's knowledge puzzles to geometric shapes built to model networks of unreliable computers.",
+      "themePhotoUrl": "assets/media/2026-07-04-lying-manipulation-with-logic/cover.png"
     },
     {
       "id": "2026-06-10-tts-panel-oedipus-craft-space-housing-the-people",
@@ -65,6 +72,12 @@
         "Urban Studies",
         "Housing",
         "Political Science"
+      ],
+      "guestPhotos": [
+        {
+          "name": "Lilit Zeltsburg",
+          "photoUrl": "assets/media/2026-06-10-tts-panel-oedipus-craft-space-housing-the-people/profile.jpg"
+        }
       ],
       "venue": "Oedipus Craft Space",
       "description": "Why Europe's housing crisis is less about supply than lost community and trust, debunking myths about immigration and homeownership, and what historic Amsterdam and Vienna housing models still teach us."
