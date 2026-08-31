@@ -413,7 +413,18 @@
         "Marine Biology",
         "Climate Change"
       ],
-      "description": "How coral animals build reef skeletons and host algae, and how scientists are testing whether corals can gain heat tolerance as marine heatwaves drive worsening bleaching."
+      "guestPhotos": [
+        {
+          "name": "Sarah Solomon",
+          "photoUrl": "assets/media/2024-01-18-coral-reefs/sarah-solomon.jpg"
+        },
+        {
+          "name": "René Zande",
+          "photoUrl": "assets/media/2024-01-18-coral-reefs/rene-zande.jpg"
+        }
+      ],
+      "description": "How coral animals build reef skeletons and host algae, and how scientists are testing whether corals can gain heat tolerance as marine heatwaves drive worsening bleaching.",
+      "themePhotoUrl": "assets/media/2024-01-18-coral-reefs/cover.jpg"
     }
   ]
 }

@@ -135,20 +135,26 @@ Every event gets its own folder: `assets/media/<event-id>/` (the same
 synced from `data/episodes.jsonl`, so a folder exists before any content
 does — drop files in directly, or upload through `/admin` (see below).
 
-- **Uploading via `/admin`**: the Guest Photo, Theme Photo, Excerpt Audio,
-  and Slide Deck fields each have a `media_folder`/`public_folder`
+- **Uploading via `/admin`**: the Guest Photos, Theme Photo, Excerpt
+  Audio, and Slide Deck fields each have a `media_folder`/`public_folder`
   override pointing at `assets/media/{{id}}` — Decap CMS resolves `{{id}}`
   against that same event's own `id` field, so a drag-and-drop upload on
-  any event lands directly in its folder, not one flat pile. This hasn't
-  been tested against a live `/admin` yet (needs the CMS OAuth backend —
-  see `pending-tasks/02-cms-github-oauth.md`) — worth confirming once
-  that's set up, and letting me know if `{{id}}` doesn't resolve as
-  expected.
-- **Uploading directly**: just drop a file into the matching
-  `assets/media/<event-id>/` folder and set that event's
-  `guestPhotoUrl`/`themePhotoUrl`/`excerptAudioUrl`/`slideUrl` in
-  `content/events.json` to its path (e.g.
-  `"assets/media/2024-01-18-coral-reefs/guest.jpg"`), then commit.
+  any event lands directly in its folder, not one flat pile. **Guest
+  Photos is a list** (one entry per guest — name + photo each), since an
+  episode can have more than one guest. This hasn't been tested against a
+  live `/admin` yet (needs the CMS OAuth backend — see
+  `pending-tasks/02-cms-github-oauth.md`); the Guest Photos list in
+  particular nests one field level deeper than the others, so its
+  `{{id}}` resolution is less certain than the flat fields — worth
+  confirming both once that's set up, and letting me know if `{{id}}`
+  doesn't resolve as expected.
+- **Uploading directly**: drop a file into the matching
+  `assets/media/<event-id>/` folder, then in `content/events.json` either
+  set `themePhotoUrl`/`excerptAudioUrl`/`slideUrl` to its path, or — for a
+  guest photo — add an entry to that event's `guestPhotos` array:
+  `{"name": "Guest Name", "photoUrl": "assets/media/<event-id>/photo.jpg"}`
+  (one array entry per guest). Then commit. `content/events.json`'s
+  `2024-01-18-coral-reefs` entry is a worked example with two guests.
 - A `.gitkeep` file in each folder is the only thing keeping empty ones
   tracked by git — delete it once the folder has real content in it.
 

@@ -357,14 +357,20 @@ p { margin: 0 0 1em; }
   border-bottom: 2px solid var(--ink);
 }
 
+.guest-avatars {
+  display: inline-flex;
+  flex-shrink: 0;
+}
 .guest-avatar {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--ink);
+  background: var(--surface);
   flex-shrink: 0;
 }
+.guest-avatars .guest-avatar + .guest-avatar { margin-left: -10px; }
 
 .badge {
   display: inline-flex;

@@ -104,7 +104,15 @@ collections:
                   - { label: "Echobox Broadcast", value: "broadcast" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Guest(s)", name: "guest", widget: "string", required: false }
-              - { label: "Guest Photo", name: "guestPhotoUrl", widget: "image", required: false, media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}", hint: "Drag & drop a headshot — shows as a small round avatar next to the guest's name" }
+              - label: "Guest Photos"
+                name: "guestPhotos"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}}"
+                hint: "One entry per guest — add a photo for each name listed above in Guest(s)"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Photo", name: "photoUrl", widget: "image", media_folder: "assets/media/{{id}}", public_folder: "assets/media/{{id}}" }
               - { label: "Date", name: "date", widget: "date", date_format: "YYYY-MM-DD", picker_utc: true }
               - { label: "Venue", name: "venue", widget: "string", required: false, hint: "Only needed for live events" }
               - { label: "Tags", name: "tags", widget: "list", required: false }

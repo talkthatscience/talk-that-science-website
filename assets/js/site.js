@@ -138,8 +138,12 @@
       ? '<img class="card-cover" src="' + event.themePhotoUrl + '" alt="" />'
       : "";
 
-    var guestAvatar = event.guestPhotoUrl
-      ? '<img class="guest-avatar" src="' + event.guestPhotoUrl + '" alt="" />'
+    var guestAvatars = event.guestPhotos && event.guestPhotos.length
+      ? '<span class="guest-avatars">' +
+        event.guestPhotos.map(function (g) {
+          return '<img class="guest-avatar" src="' + g.photoUrl + '" alt="' + escapeHTML(g.name || "") + '" title="' + escapeHTML(g.name || "") + '" />';
+        }).join("") +
+        "</span>"
       : "";
 
     return (
@@ -147,7 +151,7 @@
       cover +
       '<div class="meta-row">' + badges + "</div>" +
       '<h3 class="card-title">' + escapeHTML(event.title) + "</h3>" +
-      '<div class="meta-row">' + guestAvatar + '<strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
+      '<div class="meta-row">' + guestAvatars + '<strong>' + formatDate(event.date) + "</strong> &middot; " + escapeHTML(event.guest || "") + "</div>" +
       '<p class="card-desc">' + escapeHTML(event.description || "") + "</p>" +
       tagsHTML(event.tags) +
       audio +
