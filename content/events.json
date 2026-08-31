@@ -109,7 +109,14 @@
         "Philosophy",
         "Religion"
       ],
-      "description": "Why embracing \"barbarism\" and Jewish messianic thought might offer a sharper challenge to law, authority, and colonial hierarchies than conventional decolonial theory."
+      "guestPhotos": [
+        {
+          "name": "Yonathan Listik",
+          "photoUrl": "assets/media/2026-04-11-jewish-answer-to-colonialism-and-barbarism/profile.jpg"
+        }
+      ],
+      "description": "Why embracing \"barbarism\" and Jewish messianic thought might offer a sharper challenge to law, authority, and colonial hierarchies than conventional decolonial theory.",
+      "themePhotoUrl": "assets/media/2026-04-11-jewish-answer-to-colonialism-and-barbarism/cover.png"
     },
     {
       "id": "2026-02-14-feminist-approaches-to-logic",
@@ -138,7 +145,14 @@
         "Health",
         "Gender Studies"
       ],
-      "description": "How gender bias in alcohol-research questionnaires leaves women and transgender people's real barriers to treatment unmeasured, and what the menstrual cycle reveals about drinking motives and cognition."
+      "guestPhotos": [
+        {
+          "name": "Laia Alonso-Marmelstein",
+          "photoUrl": "assets/media/2026-01-17-hormones-alcohol-cognition/profile.jpg"
+        }
+      ],
+      "description": "How gender bias in alcohol-research questionnaires leaves women and transgender people's real barriers to treatment unmeasured, and what the menstrual cycle reveals about drinking motives and cognition.",
+      "themePhotoUrl": "assets/media/2026-01-17-hormones-alcohol-cognition/cover.jpg"
     },
     {
       "id": "2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought",
@@ -159,7 +173,8 @@
           "photoUrl": "assets/media/2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought/profile.jpg"
         }
       ],
-      "description": "How rethinking stupidity, intelligence, and civilization exposes the hidden colonial logic still shaping democracy, capitalism, and Jewish thought today."
+      "description": "How rethinking stupidity, intelligence, and civilization exposes the hidden colonial logic still shaping democracy, capitalism, and Jewish thought today.",
+      "themePhotoUrl": "assets/media/2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought/cover.jpg"
     },
     {
       "id": "2025-09-26-futuristic-to-whom-the-sound-of-gqom-and-south-african-electro-music",
