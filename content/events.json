@@ -400,6 +400,12 @@
         "Health",
         "Gender Studies"
       ],
+      "guestPhotos": [
+        {
+          "name": "Marion Dugué",
+          "photoUrl": "assets/media/2024-02-15-menstruation-in-space/marion-dugue.jpg"
+        }
+      ],
       "description": "How researcher Marion Dugué is developing a menstrual cup for zero gravity, and why she believes menstrual blood could become a resource for regenerative medicine on long space missions."
     },
     {
