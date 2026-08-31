@@ -350,6 +350,7 @@ p { margin: 0 0 1em; }
 
 .card-cover {
   width: calc(100% + 3rem);
+  max-width: none;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   margin: -1.5rem -1.5rem 0;
@@ -362,15 +363,15 @@ p { margin: 0 0 1em; }
   flex-shrink: 0;
 }
 .guest-avatar {
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--ink);
   background: var(--surface);
   flex-shrink: 0;
 }
-.guest-avatars .guest-avatar + .guest-avatar { margin-left: -10px; }
+.guest-avatars .guest-avatar + .guest-avatar { margin-left: -16px; }
 
 .badge {
   display: inline-flex;
