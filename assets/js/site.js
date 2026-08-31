@@ -128,7 +128,7 @@
       actions += '<a class="btn btn-primary" href="' + event.slideUrl + '" target="_blank" rel="noopener">View Slides</a>';
     }
     if (event.episodeLink) {
-      actions += '<a class="btn btn-secondary" href="' + event.episodeLink + '" target="_blank" rel="noopener">Listen to Episode</a>';
+      actions += '<a class="btn btn-secondary" href="' + event.episodeLink + '" target="_blank" rel="noopener">Listen on Echobox</a>';
     }
     if (!actions) {
       actions = '<span class="hint" style="color:var(--muted); font-size:0.85rem;">Slides / audio coming after the show</span>';
