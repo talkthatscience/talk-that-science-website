@@ -311,6 +311,12 @@
         "Earth Science",
         "Climate Change"
       ],
+      "guestPhotos": [
+        {
+          "name": "Marion Dugué",
+          "photoUrl": "assets/media/2024-11-22-understanding-glaciers-through-satellites/marion-dugue.jpg"
+        }
+      ],
       "description": "A researcher explains how satellite radar imagery reveals glacier zones and melt patterns in the Arctic, and why correcting that data accurately matters for tracking water resources and climate change.",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
@@ -325,7 +331,14 @@
         "Natural Sciences",
         "Quantum Computing"
       ],
+      "guestPhotos": [
+        {
+          "name": "Pablo Cova Farina",
+          "photoUrl": "assets/media/2024-10-25-what-is-quantum-computing/profile.jpg"
+        }
+      ],
       "description": "How quantum bits can hold multiple states at once, why that makes certain problems like simulating materials or factoring huge numbers newly solvable, and what still stands between today's lab-bound qubits and a working machine.",
+      "themePhotoUrl": "assets/media/2024-10-25-what-is-quantum-computing/cover.png",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -340,7 +353,14 @@
         "Housing",
         "Political Science"
       ],
+      "guestPhotos": [
+        {
+          "name": "Elisabetta Gobbo",
+          "photoUrl": "assets/media/2024-09-06-what-is-an-equal-city/profile.jpg"
+        }
+      ],
       "description": "How rising tourism and unchecked property markets are pricing residents out of cities like Venice and Amsterdam, and whether philosophy can explain why gentrification is actually unjust.",
+      "themePhotoUrl": "assets/media/2024-09-06-what-is-an-equal-city/cover.png",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -355,7 +375,14 @@
         "History",
         "Political Science"
       ],
+      "guestPhotos": [
+        {
+          "name": "Lilit Zeltsburg",
+          "photoUrl": "assets/media/2024-08-02-our-revolution-for-the-orient/profile.jpg"
+        }
+      ],
       "description": "How Soviet newspapers spun Iran's 1979 Islamic Revolution to fit communist ideology, quietly downplaying its religious roots to preserve the story of inevitable progress toward revolution.",
+      "themePhotoUrl": "assets/media/2024-08-02-our-revolution-for-the-orient/cover.webp",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -370,7 +397,14 @@
         "Psychology",
         "Health"
       ],
+      "guestPhotos": [
+        {
+          "name": "Annemie Ploeger",
+          "photoUrl": "assets/media/2024-07-05-the-evolution-of-depression/profile.jpg"
+        }
+      ],
       "description": "How evolutionary mismatch between ancestral hunter-gatherer life and modern city living—diet, exercise, social media, individualism—may explain rising rates of depression, anxiety, and stress.",
+      "themePhotoUrl": "assets/media/2024-07-05-the-evolution-of-depression/cover.png",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -393,6 +427,7 @@
         }
       ],
       "description": "How political actors exploit conspiracy theories by weaponizing their flexibility against evidence, and how belief in a secret plot builds trust networks that shift from personal skepticism into extremist ideology.",
+      "themePhotoUrl": "assets/media/2024-06-07-conspiracy-theories-as-a-political-tool/cover.jpg",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -414,6 +449,7 @@
         }
       ],
       "description": "How the sexual double standard shapes what we expect from men and women in bed, why it persists even when people privately disagree, and what media could do to change it.",
+      "themePhotoUrl": "assets/media/2024-04-19-sexual-double-standards/cover.jpg",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
@@ -457,6 +493,7 @@
         }
       ],
       "description": "How researcher Marion Dugué is developing a menstrual cup for zero gravity, and why she believes menstrual blood could become a resource for regenerative medicine on long space missions.",
+      "themePhotoUrl": "assets/media/2024-02-15-menstruation-in-space/cover.webp",
       "episodeLink": "https://www.echobox.radio/shows/talk-that-science"
     },
     {
