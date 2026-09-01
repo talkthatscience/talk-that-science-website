@@ -54,7 +54,14 @@
         "Decolonial Theory",
         "Migration",
         "Religion"
-      ]
+      ],
+      "guestPhotos": [
+        {
+          "name": "Daniel Voskoboynik",
+          "photoUrl": "assets/media/2026-08-29-teachings-of-the-diaspora-on-climate-justice/profile.jpeg"
+        }
+      ],
+      "themePhotoUrl": "assets/media/2026-08-29-teachings-of-the-diaspora-on-climate-justice/cover.webp"
     },
     {
       "id": "2026-07-04-lying-manipulation-with-logic",
@@ -207,6 +214,19 @@
       ],
       "description": "How gender bias in alcohol-research questionnaires leaves women and transgender people's real barriers to treatment unmeasured, and what the menstrual cycle reveals about drinking motives and cognition.",
       "themePhotoUrl": "assets/media/2026-01-17-hormones-alcohol-cognition/cover.jpg"
+    },
+    {
+      "id": "2025-11-21-why-we-re-getting-poorer",
+      "type": "broadcast",
+      "title": "Why We're Getting Poorer",
+      "guest": "Cahal Moran",
+      "date": "2025-11-21",
+      "tags": [
+        "Economics",
+        "Social Sciences",
+        "Inequality",
+        "Political Science"
+      ]
     },
     {
       "id": "2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought",
