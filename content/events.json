@@ -11,7 +11,15 @@
         "Media Studies",
         "Polarization",
         "Political Science"
-      ]
+      ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science",
+      "guestPhotos": [
+        {
+          "name": "Cristina Chueca del Cerro",
+          "photoUrl": "assets/media/2026-10-24-echo-chambers/profile.jpg"
+        }
+      ],
+      "themePhotoUrl": "assets/media/2026-10-24-echo-chambers/cover.jpg"
     },
     {
       "id": "2026-10-21-gqom-at-oedipus-brewery",
@@ -25,7 +33,15 @@
         "Music",
         "Decolonial Theory"
       ],
-      "venue": "Oedipus Brewery"
+      "episodeLink": "https://oedipus.com/pages/craft-space",
+      "guestPhotos": [
+        {
+          "name": "Josephine Zwaan",
+          "photoUrl": "assets/media/2026-10-21-gqom-at-oedipus-brewery/images.jpg"
+        }
+      ],
+      "venue": "Oedipus Brewery",
+      "themePhotoUrl": "assets/media/2026-10-21-gqom-at-oedipus-brewery/cover.jpg"
     },
     {
       "id": "2026-09-26-fire-resilient-forests",
@@ -38,7 +54,15 @@
         "Forestry",
         "Climate Change",
         "Ecology"
-      ]
+      ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science",
+      "guestPhotos": [
+        {
+          "name": "Fiona Thacker",
+          "photoUrl": "assets/media/2026-09-26-fire-resilient-forests/profile.jpg"
+        }
+      ],
+      "themePhotoUrl": "assets/media/2026-09-26-fire-resilient-forests/cover.jpg"
     },
     {
       "id": "2026-08-29-teachings-of-the-diaspora-on-climate-justice",
@@ -55,6 +79,7 @@
         "Migration",
         "Religion"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-08-29%2013:00:00",
       "guestPhotos": [
         {
           "name": "Daniel Voskoboynik",
@@ -62,6 +87,35 @@
         }
       ],
       "themePhotoUrl": "assets/media/2026-08-29-teachings-of-the-diaspora-on-climate-justice/cover.webp"
+    },
+    {
+      "id": "2026-08-19-how-does-ai-work",
+      "type": "live_event",
+      "title": "How Does AI Work?",
+      "guest": "Peter Bloem, Micha Heilbron",
+      "date": "2026-08-19",
+      "tags": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Cognitive Science",
+        "Neuroscience"
+      ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-08-19%2019:30:00",
+      "venue": "Oedipus Brewery",
+      "guestPhotos": [
+        {
+          "name": "Peter Bloem",
+          "photoUrl": "assets/media/2026-08-19-how-does-ai-work/profile-1.jpg"
+        },
+        {
+          "name": "Micha Heilbron",
+          "photoUrl": "assets/media/2026-08-19-how-does-ai-work/profile-2.jpg"
+        }
+      ],
+      "description": "How neural networks, next-token prediction, and scaling laws power modern language models, and what the mechanics of AI prediction reveal about human language processing, cognition, and our own brains.",
+      "themePhotoUrl": "assets/media/2026-08-19-how-does-ai-work/cover.png",
+      "slideUrl": "assets/media/2026-08-19-how-does-ai-work/SOTB%20AI.pdf"
     },
     {
       "id": "2026-07-04-lying-manipulation-with-logic",
@@ -75,6 +129,7 @@
         "Epistemology",
         "Philosophy"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-07-04%2013:00:00",
       "guestPhotos": [
         {
           "name": "Djanira Gomes",
@@ -96,6 +151,7 @@
         "Housing",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-06-10%2019:30:00",
       "guestPhotos": [
         {
           "name": "Lilit Zeltsburg",
@@ -103,7 +159,9 @@
         }
       ],
       "venue": "Oedipus Craft Space",
-      "description": "Why Europe's housing crisis is less about supply than lost community and trust, debunking myths about immigration and homeownership, and what historic Amsterdam and Vienna housing models still teach us."
+      "description": "Why Europe's housing crisis is less about supply than lost community and trust, debunking myths about immigration and homeownership, and what historic Amsterdam and Vienna housing models still teach us.",
+      "themePhotoUrl": "assets/media/2026-06-10-tts-panel-oedipus-craft-space-housing-the-people/cover.jpg",
+      "slideUrl": "assets/media/2026-06-10-tts-panel-oedipus-craft-space-housing-the-people/SOTB%20Lilit%20Zeltsburg.pdf"
     },
     {
       "id": "2026-06-06-how-to-change-21st-century-minds",
@@ -116,6 +174,7 @@
         "Psychology",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-06-06%2013:00:00",
       "guestPhotos": [
         {
           "name": "Sarah Stein Lubrano",
@@ -138,6 +197,7 @@
         "Gender Studies",
         "Decolonial Theory"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-05-09%2013:00:00",
       "guestPhotos": [
         {
           "name": "Femke Dekker",
@@ -163,6 +223,7 @@
         "Philosophy",
         "Religion"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-04-11%2013:00:00",
       "guestPhotos": [
         {
           "name": "Yonathan Listik",
@@ -184,6 +245,7 @@
         "Gender Studies",
         "Philosophy"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-02-14%2013:00:00",
       "guestPhotos": [
         {
           "name": "Rebecca Kosten",
@@ -206,6 +268,7 @@
         "Health",
         "Gender Studies"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2026-01-17%2013:00:00",
       "guestPhotos": [
         {
           "name": "Laia Alonso-Marmelstein",
@@ -226,7 +289,15 @@
         "Social Sciences",
         "Inequality",
         "Political Science"
-      ]
+      ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-11-21%2013:00:00",
+      "guestPhotos": [
+        {
+          "name": "Cahal Moran",
+          "photoUrl": "assets/media/2025-11-21-why-we-re-getting-poorer/profile.jpg"
+        }
+      ],
+      "themePhotoUrl": "assets/media/2025-11-21-why-we-re-getting-poorer/cover.jpg"
     },
     {
       "id": "2025-10-24-decolonializing-decolonialization-questions-from-rabbinical-thought",
@@ -241,6 +312,7 @@
         "Religion",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-10-24%2013:00:00",
       "guestPhotos": [
         {
           "name": "Yonathan Buskila Listik",
@@ -262,6 +334,7 @@
         "Music",
         "Decolonial Theory"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-09-26%2013:00:00",
       "guestPhotos": [
         {
           "name": "Josephine Zwaan",
@@ -283,6 +356,7 @@
         "Psychology",
         "Forensic Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-08-01%2013:00:00",
       "guestPhotos": [
         {
           "name": "Eva Billen",
@@ -304,6 +378,7 @@
         "Quantum Computing",
         "Earth Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-07-04%2000:00:00",
       "guestPhotos": [
         {
           "name": "Malte Schade",
@@ -325,6 +400,7 @@
         "Accessibility",
         "Linguistics"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-06-06%2013:00:00",
       "guestPhotos": [
         {
           "name": "Oline Ranum",
@@ -346,6 +422,7 @@
         "Behavioral Science",
         "Philosophy"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-05-09%2013:00:00",
       "guestPhotos": [
         {
           "name": "Ella Needler",
@@ -366,6 +443,7 @@
         "Artificial Intelligence",
         "Linguistics"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-04-24%2012:00:00",
       "guestPhotos": [
         {
           "name": "Marianne de heer Kloots",
@@ -386,6 +464,7 @@
         "Social Sciences",
         "Gender Studies"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-03-14%2013:00:00",
       "guestPhotos": [
         {
           "name": "Kaneta Zilluer",
@@ -405,6 +484,7 @@
         "Social Sciences",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-02-14%2013:00:00",
       "guestPhotos": [
         {
           "name": "Giovanni D'Agostino",
@@ -430,6 +510,7 @@
         "Philosophy",
         "Epistemology"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-01-17%2000:00:00",
       "guestPhotos": [
         {
           "name": "Erik Stei",
@@ -450,6 +531,7 @@
         "Earth Science",
         "Climate Change"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-11-22%2013:00:00",
       "guestPhotos": [
         {
           "name": "Marion Dugué",
@@ -470,6 +552,7 @@
         "Natural Sciences",
         "Quantum Computing"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-10-25%2013:00:00",
       "guestPhotos": [
         {
           "name": "Pablo Cova Farina",
@@ -491,6 +574,7 @@
         "Housing",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-09-06%2014:00:00",
       "guestPhotos": [
         {
           "name": "Elisabetta Gobbo",
@@ -512,6 +596,7 @@
         "History",
         "Political Science"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-08-02%2002:00:00",
       "guestPhotos": [
         {
           "name": "Lilit Zeltsburg",
@@ -533,6 +618,7 @@
         "Psychology",
         "Health"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2025-07-05%2013:00:00",
       "guestPhotos": [
         {
           "name": "Annemie Ploeger",
@@ -555,6 +641,7 @@
         "Political Science",
         "Media Studies"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-06-07%2013:00:00",
       "guestPhotos": [
         {
           "name": "Giulia Napolitano",
@@ -576,6 +663,7 @@
         "Psychology",
         "Media Studies"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-09-19%2012:00:00",
       "guestPhotos": [
         {
           "name": "Gijsje Maas",
@@ -596,6 +684,7 @@
         "Logic",
         "Philosophy"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-03-22%2012:00:00",
       "guestPhotos": [
         {
           "name": "Nick Bezhanishvili",
@@ -618,6 +707,7 @@
         "Health",
         "Gender Studies"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-02-15%2014:00:00",
       "guestPhotos": [
         {
           "name": "Marion Dugué",
@@ -638,6 +728,7 @@
         "Marine Biology",
         "Climate Change"
       ],
+      "episodeLink": "https://www.echobox.radio/shows/talk-that-science?episode=2024-01-18%2014:00:00",
       "guestPhotos": [
         {
           "name": "Sarah Solomon",
