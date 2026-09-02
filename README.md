@@ -43,9 +43,6 @@ would be needed.
     two files in `assets/img/` — easy to hand-tune further or swap if you
     get an official style guide with exact specs later.
 - **Still placeholder (replace when ready):**
-  - The Echobox player on the homepage (`#echobox-player`) currently links
-    out to the live stream — swap it for Echobox's official embed/widget
-    code if/when they provide one.
   - `content/events.json` holds real episodes from `data/episodes.jsonl`
     (see "Episode data" below) with real descriptions, but no guest
     photos, theme photos, excerpt audio, or slide decks yet — those still
@@ -61,8 +58,8 @@ would be needed.
 ## Site structure
 
 ```
-index.html              Homepage — Echobox player/stream link, next event,
-                         latest episode, newsletter signup
+index.html              Homepage — hero, next event, latest episode,
+                         newsletter signup
 events.html              Event & Slide Hub — every broadcast + bar night,
                          filterable, with excerpt audio + slide links
 calendar.html            Chronological list of upcoming broadcasts + events

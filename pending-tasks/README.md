@@ -2,7 +2,7 @@
 
 Everything left to do before this site is fully "real" — split into two
 groups. Nothing here blocks the site being live; it already is, at
-https://talkthatscience.github.io/talk-that-science-website/.
+https://talkthatscience.github.io/.
 
 ## Blocking real functionality
 
@@ -18,7 +18,6 @@ Nothing here breaks the site — these are placeholders/estimates called out
 in the main README that should get swapped for the real thing when it's
 available.
 
-- [ ] [Echobox player widget](03-echobox-player-widget.md)
 - [ ] [Brand assets & colours](04-brand-assets-and-colors.md)
 - [ ] [Real event content](05-real-event-content.md)
 - [ ] [Newsletter provider](06-newsletter-provider.md)

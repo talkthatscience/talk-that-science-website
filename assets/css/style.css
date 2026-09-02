@@ -260,55 +260,6 @@ p { margin: 0 0 1em; }
   .hero-illustration { max-width: 380px; margin: 0 auto; }
 }
 
-/* ---- player card ---- */
-.player-card {
-  margin-top: 2.5rem;
-  background: var(--surface);
-  border: 2px solid var(--ink);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.player-card .pulse {
-  position: relative;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: #fdeee2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.player-card .pulse svg { width: 26px; height: 26px; }
-.player-card .pulse::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 54px; height: 54px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  animation: pulse 2.2s ease-out infinite;
-}
-@keyframes pulse {
-  0% { transform: scale(0.9); opacity: 0.9; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
-
-.player-card .player-info { flex: 1; min-width: 200px; }
-.player-card .player-info .status {
-  font-size: 0.8rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-.player-card .player-info h3 { margin: 0.15rem 0 0; }
-
 /* ---- section ---- */
 .section { padding: 3.5rem 0; position: relative; z-index: 1; }
 .section-alt { background: var(--bg-alt); }
